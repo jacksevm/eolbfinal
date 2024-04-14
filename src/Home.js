@@ -2,12 +2,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css'; // Import the CSS file for styling
+import { Helmet } from 'react-helmet';
 
 function Home() {
   return (
     
       
       <div className="home">
+         <Helmet>
+         <title>GoogleSheet Interface | Home</title>
+        <meta name="description" content="Google Sheet Interface for Chennai Division" />
+        {/* Add more meta tags, link tags, or other head elements as needed */}
+      </Helmet>
         <div className="card">
           <Link to="/eolb">
             <img src={process.env.PUBLIC_URL + '/img/eolb.jpg'} alt="EOLB Status" />

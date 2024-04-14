@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Table.css'; // Make sure to create some basic styles for the cards in App.css
-
+import { Helmet } from 'react-helmet';
 // Search component
 function Search({ handleSearch }) {
   return (
@@ -20,6 +20,11 @@ function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
 
   return (
     <div className="pagination-container">
+      <Helmet>
+         <title>EOLB Check List</title>
+        <meta name="description" content="Google Sheet Interface for Chennai Division" />
+        {/* Add more meta tags, link tags, or other head elements as needed */}
+      </Helmet>
       <nav>
         <ul className="pagination">
           {pageNumbers.map(number => (
