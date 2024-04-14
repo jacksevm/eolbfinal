@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Helmet>
-         <title>Google sheet Interface</title>
+         <title>GoogleSheet Interface | Home</title>
         <meta name="description" content="Google Sheet Interface for Chennai Division" />
         {/* Add more meta tags, link tags, or other head elements as needed */}
       </Helmet>
