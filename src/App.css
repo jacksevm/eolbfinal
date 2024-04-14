@@ -1,6 +1,7 @@
 .App {
   text-align: center;
- 
+  overflow-y: auto; /* Enable vertical scroll */
+  overflow-x: auto; /* Enable Horizontal scroll */
 
 }
 
