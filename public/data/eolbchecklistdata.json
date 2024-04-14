@@ -1,0 +1,15 @@
+[
+    {
+        "ID": "1",
+        "LC Number": "16",
+        "Date of Check": "13-04-2024",
+        "Height of 'A' Boom from Ground Level": "0.98 Mtrs",
+        "Height of 'B' Boom from Ground Level": "0.99 Mtrs",
+        "Working/Trippint Current - 'A' Boom": "To be Measured",
+        "Working/Tripping Current - 'B' Boom": "To be Measured",
+        "Positive Boom Lock - 'A' Boom": "To be Cheked",
+        "Positive Boom Lock - 'B' Boom": "To be Cheked",
+        "Status of LCR After lifting 'A' Boom more than 5 Degree": "To be Cheked",
+        "Status of LCR After lifting 'B' Boom more than 5 Degree": "To be Cheked"
+    }
+]

@@ -1,0 +1,37 @@
+/* Home.css */
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Align cards horizontally at the center */
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  width: 250px; /* Adjust the width as needed */
+  margin: 10px; /* Add margin between cards */
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-info {
+  padding: 16px;
+}
+
+.card-info h2 {
+  margin-top: 0;
+}
+
+.card-info p {
+  margin-bottom: 0;
+}

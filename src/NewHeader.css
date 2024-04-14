@@ -1,0 +1,70 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .hamburger-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .hamburger-icon.open:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  
+  .hamburger-icon.open:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-icon.open:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+  
+  .menu-items {
+    list-style: none;
+    padding: 20px;
+    margin: 20px;
+    position: absolute;
+    top: 50px; /* Adjust this value to position the menu items below the hamburger icon */
+    Right: 0;
+    background-color: #06606d;
+    width: Auto;
+  }
+  
+  .menu-items li {
+        padding: 10px;
+  }
+  
+  .menu-items li:last-child {
+    padding: 10px;
+  }
+  
+  .menu-items li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu-items li a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+  

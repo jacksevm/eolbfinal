@@ -1,0 +1,113 @@
+
+/* Table styles */
+.table-container {
+  max-height: 400px; /* Adjust the height as needed */
+  overflow-y: auto; /* Enable vertical scroll */
+  overflow-x: auto; /* Enable Horizontal scroll */
+}
+
+.table-wrapper {
+  overflow-x: auto; /* Make the table horizontally scrollable */
+  max-width: 100%; /* Ensure that the table wrapper does not exceed the viewport width */
+  overflow-y: auto; /* Make the table horizontally scrollable */
+}
+
+.scrollable-table {
+  min-width: 100%; /* Ensure that the table always fills the width of its container */
+  border-collapse: collapse;
+ 
+}
+
+.scrollable-table th,
+.scrollable-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  white-space: nowrap; /* Prevent line breaks within table cells */
+ 
+}
+
+/* Pagination styles */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pagination .page-item {
+  display: inline;
+  margin-right: 5px;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.pagination .page-link {
+  color: #007bff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  cursor: pointer;
+}
+
+.pagination .page-link:hover {
+  background-color: #f0f0f0;
+}
+
+/* Search bar styles */
+.search-container {
+ 
+  padding: 20px; /* Add padding to the search container */
+}
+
+.search-input {
+  padding: 8px; /* Add padding to the search input */
+  width: 20%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+@keyframes shine {
+  0% {
+    color: blue /* Start with white color */
+  }
+  50% {
+    color: greenyellow; /* Transition to gold color */
+  }
+  75% {
+    color:grey /* Back to white color */
+  }
+}
+
+/* Apply animation to the heading */
+.heading {
+  animation: shine 5s ease infinite; /* Apply the shining animation */
+  text-align: center; /* Align the heading to the center */
+  text-decoration: underline; /* Underline the heading */
+}
+
+/* Add styles for clickable column headers */
+.sortable {
+  cursor: pointer;
+}
+
+/* Add styles for indicating sort order */
+.sortable.asc::after {
+  content: ' ▲';
+}
+
+.sortable.desc::after {
+  content: ' ▼';
+}
+.data-table th {
+  white-space: normal;
+  word-wrap: break-word;
+}
