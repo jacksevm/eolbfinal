@@ -109,7 +109,7 @@
     },
     {
         "ID": 5,
-        "LC Number": "4",
+        "LC Number": 4,
         "Is feasible to Cast EOLB": "Yes",
         "Reason for non feasibility to cast EOLB": "N/A",
         "IS Marking Given for EOLB": "Yes",
@@ -217,7 +217,7 @@
     },
     {
         "ID": 9,
-        "LC Number": 19A,
+        "LC Number": "19A",
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -271,7 +271,7 @@
     },
     {
         "ID": 11,
-        "LC Number": "28",
+        "LC Number": 28,
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -460,7 +460,7 @@
     },
     {
         "ID": 18,
-        "LC Number": 47D,
+        "LC Number": "47D",
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -487,7 +487,7 @@
     },
     {
         "ID": 19,
-        "LC Number": 49D,
+        "LC Number": "49D",
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
