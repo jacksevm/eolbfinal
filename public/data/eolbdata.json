@@ -1,7 +1,7 @@
 [
     {
-        "ID": "1",
-        "LC Number": "18",
+        "ID": 1,
+        "LC Number": 18,
         "Is feasible to Cast EOLB": "Yes",
         "Reason for non feasibility to cast EOLB": "N/A",
         "IS Marking Given for EOLB": "Yes",
@@ -27,8 +27,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "2",
-        "LC Number": "16",
+        "ID": 2,
+        "LC Number": 16,
         "Is feasible to Cast EOLB": "Yes",
         "Reason for non feasibility to cast EOLB": "N/A",
         "IS Marking Given for EOLB": "Yes",
@@ -54,8 +54,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "3",
-        "LC Number": "11",
+        "ID": 3,
+        "LC Number": 11,
         "Is feasible to Cast EOLB": "Yes",
         "Reason for non feasibility to cast EOLB": "N/A",
         "IS Marking Given for EOLB": "Yes",
@@ -81,8 +81,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "4",
-        "LC Number": "12",
+        "ID": 4,
+        "LC Number": 12,
         "Is feasible to Cast EOLB": "Yes",
         "Reason for non feasibility to cast EOLB": "N/A",
         "IS Marking Given for EOLB": "Yes",
@@ -108,7 +108,7 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "5",
+        "ID": 5,
         "LC Number": "4",
         "Is feasible to Cast EOLB": "Yes",
         "Reason for non feasibility to cast EOLB": "N/A",
@@ -135,8 +135,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "6",
-        "LC Number": "7",
+        "ID": 6,
+        "LC Number": 7,
         "Is feasible to Cast EOLB": "Yes",
         "Reason for non feasibility to cast EOLB": "N/A",
         "IS Marking Given for EOLB": "Yes",
@@ -162,8 +162,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "7",
-        "LC Number": "8",
+        "ID": 7,
+        "LC Number": 8,
         "Is feasible to Cast EOLB": "Yes",
         "Reason for non feasibility to cast EOLB": "N/A",
         "IS Marking Given for EOLB": "Yes",
@@ -189,8 +189,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "8",
-        "LC Number": "14",
+        "ID": 8,
+        "LC Number": 14,
         "Is feasible to Cast EOLB": "No",
         "Reason for non feasibility to cast EOLB": "Earth work Required",
         "IS Marking Given for EOLB": "No",
@@ -216,8 +216,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "9",
-        "LC Number": "19A",
+        "ID": 9,
+        "LC Number": 19A,
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -243,8 +243,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "10",
-        "LC Number": "24",
+        "ID": 10,
+        "LC Number": 24,
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -270,7 +270,7 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "11",
+        "ID": 11,
         "LC Number": "28",
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
@@ -297,8 +297,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "12",
-        "LC Number": "32",
+        "ID": 12,
+        "LC Number": 32,
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -324,8 +324,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "13",
-        "LC Number": "35",
+        "ID": 13,
+        "LC Number": 35,
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -351,8 +351,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "14",
-        "LC Number": "42",
+        "ID": 14,
+        "LC Number": 42,
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -378,8 +378,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "15",
-        "LC Number": "43",
+        "ID": 15,
+        "LC Number": 43,
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -405,8 +405,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "16",
-        "LC Number": "44",
+        "ID": 16,
+        "LC Number": 44,
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -432,8 +432,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "17",
-        "LC Number": "45",
+        "ID": 17,
+        "LC Number": 45,
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -459,8 +459,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "18",
-        "LC Number": "47D",
+        "ID": 18,
+        "LC Number": 47D,
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
@@ -486,8 +486,8 @@
         "Date of Update": "15-04-2024"
     },
     {
-        "ID": "19",
-        "LC Number": "49D",
+        "ID": 19,
+        "LC Number": 49D,
         "Is feasible to Cast EOLB": "To be checked",
         "Reason for non feasibility to cast EOLB": "To be checked",
         "IS Marking Given for EOLB": "To be checked",
