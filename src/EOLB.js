@@ -166,13 +166,14 @@ function EOLB() {
             </table>
           </div>
         </div>
-        <Pagination
+       
+      </div>
+                 <Pagination
         totalItems={data.length}
         itemsPerPage={itemsPerPage}
         currentPage={currentPage}
         paginate={paginate}
       />
-      </div>
       </div>
       
       
