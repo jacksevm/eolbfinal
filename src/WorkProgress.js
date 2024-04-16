@@ -130,17 +130,22 @@ function WorkProgress() {
               <thead>
                 <tr>
                   {headings.map((heading, index) => (
+                     heading !== 'Sno' && (
                     <th key={index} onClick={() => handleSort(heading)} className={sortColumn === heading ? `sortable ${sortOrder}` : 'sortable'}>
                       {heading}
                     </th>
+)
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {currentItems.map((item, rowIndex) => (
+                   heading !== 'Sno' && (
                   <tr key={rowIndex}>
                     {headings.map((heading, colIndex) => (
+                       
                       <td key={colIndex}>{item[heading]}</td>
+                      )
                     ))}
                   </tr>
                 ))}
