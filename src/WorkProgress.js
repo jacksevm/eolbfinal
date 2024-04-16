@@ -1,24 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import './Table.css';
-import { Helmet } from 'react-helmet';
 
-function Search({ handleSearch }) {
-  return (
-    <div className="search-container">
-      <input type="text" className="search-input" placeholder="Search PH..." onChange={handleSearch} />
-    </div>
-  );
-}
-
-function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
-  const pageNumbers = [];
-
-  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
-    pageNumbers.push(i);
-  }
-
-  return (
-    <div className="pagination-container">
 import React, { useEffect, useState } from 'react';
 import './Table.css'; // Make sure to create some basic styles for the cards in App.css
 import { Helmet } from 'react-helmet';
@@ -26,7 +6,7 @@ import { Helmet } from 'react-helmet';
 function Search({ handleSearch }) {
   return (
     <div className="search-container">
-      <input type="text" className="search-input" placeholder="Search PH Number..." onChange={handleSearch} />
+      <input type="text" className="search-input" placeholder="Search LC Number..." onChange={handleSearch} />
     </div>
   );
 }
@@ -72,7 +52,7 @@ function WorkProgress() {
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
   useEffect(() => {
-    fetch('API_URL') // Replace with your actual endpoint URL
+    fetch('https://sheetdb.io/api/v1/dtks9g5i190ug') // Replace with your actual endpoint URL
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -134,7 +114,7 @@ function WorkProgress() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['PH'].toString().startsWith(searchTerm)) // Filter based on LC Number column
+    .filter(item => item['LC Number'].toLowerCase().startsWith(searchTerm)) // Filter based on LC Number column
     .sort((a, b) => {
       if (sortColumn) {
         const columnA = a[sortColumn];
@@ -164,7 +144,7 @@ function WorkProgress() {
                 <tr>
                   {headings.map((heading, index) => (
                     // Exclude rendering ID column
-                    heading !== 'Sno' && (
+                    heading !== 'ID' && (
                       <th key={index} onClick={() => handleSort(heading)} className={sortColumn === heading ? `sortable ${sortOrder}` : 'sortable'}>
                         {heading}
                       </th>
@@ -177,7 +157,7 @@ function WorkProgress() {
                   <tr key={rowIndex}>
                     {headings.map((heading, colIndex) => (
                       // Exclude rendering ID column
-                      heading !== 'Sno' && (
+                      heading !== 'ID' && (
                         <td key={colIndex}>{item[heading]}</td>
                       )
                     ))}
@@ -203,5 +183,3 @@ function WorkProgress() {
 }
 
 export default WorkProgress;
-
-    
