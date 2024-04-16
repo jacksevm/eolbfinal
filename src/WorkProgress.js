@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import './Table.css'; // Make sure to create some basic styles for the cards in App.css
+import './Table.css';
 import { Helmet } from 'react-helmet';
-// Search component
+
 function Search({ handleSearch }) {
   return (
     <div className="search-container">
-      <input type="text" className="search-input" placeholder="Search LC Number..." onChange={handleSearch} />
+      <input type="text" className="search-input" placeholder="Search PH..." onChange={handleSearch} />
     </div>
   );
 }
 
-// Pagination component
 function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
   const pageNumbers = [];
 
@@ -23,7 +22,6 @@ function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
       <Helmet>
          <title>EOLB Check List</title>
         <meta name="description" content="Google Sheet Interface for Chennai Division" />
-        {/* Add more meta tags, link tags, or other head elements as needed */}
       </Helmet>
       <nav>
         <ul className="pagination">
@@ -46,12 +44,12 @@ function WorkProgress() {
   const [headings, setHeadings] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(5); // Change as needed
+  const [itemsPerPage] = useState(5);
   const [sortColumn, setSortColumn] = useState(null);
-  const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
+  const [sortOrder, setSortOrder] = useState('asc');
 
   useEffect(() => {
-    fetch('Enter API_URL') // Replace with your actual endpoint URL
+    fetch('Enter API_URL')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -63,13 +61,12 @@ function WorkProgress() {
         if (data.length > 0) {
           const sheetHeadings = Object.keys(data[0]);
           setHeadings(sheetHeadings);
-          setTableHeading('Data From Google Sheet')
+          setTableHeading('Data From Google Sheet');
         }
       })
       .catch(apiError => {
         console.error('Error fetching data from API:', apiError);
-        // If API fetch fails, fetch local data instead
-        fetch('./data/workprogress.json') // Replace with the correct path to your local data file
+        fetch('./data/workprogress.json')
           .then(response => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
@@ -81,7 +78,7 @@ function WorkProgress() {
             if (data.length > 0) {
               const sheetHeadings = Object.keys(data[0]);
               setHeadings(sheetHeadings);
-              setTableHeading('Data From Local Table')
+              setTableHeading('Data From Local Table');
             }
           })
           .catch(localError => {
@@ -89,14 +86,13 @@ function WorkProgress() {
           });
       });
   }, []);
-  // Function to handle search
+
   const handleSearch = event => {
     const searchTerm = event.target.value.toLowerCase();
     setSearchTerm(searchTerm);
-    setCurrentPage(1); // Reset pagination to first page when searching
+    setCurrentPage(1);
   };
 
-  // Function to handle sorting
   const handleSort = column => {
     if (sortColumn === column) {
       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
@@ -106,23 +102,18 @@ function WorkProgress() {
     }
   };
 
-  // Function to handle pagination
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
-  // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['PH'].startsWith(searchTerm)) // Filter based on LC Number column
+    .filter(item => item['PH'].toString().startsWith(searchTerm)) // Adjust filtering to work with numerical values
     .sort((a, b) => {
       if (sortColumn) {
         const columnA = a[sortColumn];
         const columnB = b[sortColumn];
-        if (sortOrder === 'asc') {
-          return columnA.localeCompare(columnB);
-        } else {
-          return columnB.localeCompare(columnA);
-        }
+        const comparison = sortOrder === 'asc' ? 1 : -1;
+        return columnA - columnB * comparison; // Ensure proper numerical sorting
       }
       return 0;
     })
@@ -130,24 +121,18 @@ function WorkProgress() {
 
   return (
     <div className='App'>
-       <h1 className="heading">{tableHeading}</h1>
-  <div className="table-container">
-      
- 
-
-<Search handleSearch={handleSearch} />
+      <h1 className="heading">{tableHeading}</h1>
+      <div className="table-container">
+        <Search handleSearch={handleSearch} />
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
               <thead>
                 <tr>
                   {headings.map((heading, index) => (
-                    // Exclude rendering ID column
-                       (
-                      <th key={index} onClick={() => handleSort(heading)} className={sortColumn === heading ? `sortable ${sortOrder}` : 'sortable'}>
-                        {heading}
-                      </th>
-                    )
+                    <th key={index} onClick={() => handleSort(heading)} className={sortColumn === heading ? `sortable ${sortOrder}` : 'sortable'}>
+                      {heading}
+                    </th>
                   ))}
                 </tr>
               </thead>
@@ -155,10 +140,7 @@ function WorkProgress() {
                 {currentItems.map((item, rowIndex) => (
                   <tr key={rowIndex}>
                     {headings.map((heading, colIndex) => (
-                      // Exclude rendering ID column
-                      (
-                        <td key={colIndex}>{item[heading]}</td>
-                      )
+                      <td key={colIndex}>{item[heading]}</td>
                     ))}
                   </tr>
                 ))}
@@ -167,16 +149,13 @@ function WorkProgress() {
           </div>
         </div>
         <Pagination
-        totalItems={data.length}
-        itemsPerPage={itemsPerPage}
-        currentPage={currentPage}
-        paginate={paginate}
-      />
+          totalItems={data.length}
+          itemsPerPage={itemsPerPage}
+          currentPage={currentPage}
+          paginate={paginate}
+        />
       </div>
-      </div>
-      
-      
-      
+    </div>
   );
 }
 
