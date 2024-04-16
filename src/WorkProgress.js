@@ -156,7 +156,7 @@ function WorkProgress() {
                   <tr key={rowIndex}>
                     {headings.map((heading, colIndex) => (
                       // Exclude rendering ID column
-                      heading !== 'ID' && (
+                      heading !== 'Sno' && (
                         <td key={colIndex}>{item[heading]}</td>
                       )
                     ))}
