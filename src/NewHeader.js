@@ -21,6 +21,7 @@ const NewHeader = () => {
         {isMenuOpen && (
           <ul className="menu-items">
             <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
+            <li><Link to="/workprogress" onClick={toggleMenu}>Work Progress</Link></li>
             <li><Link to="/eolb" onClick={toggleMenu}>EOLB</Link></li>
             <li><Link to="/eolbchecklist" onClick={toggleMenu}>EOLB Pre-com Check lists</Link></li>
           </ul>
