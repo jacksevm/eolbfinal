@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import './Table.css'; // Make sure to create some basic styles for the cards in App.css
 import { Helmet } from 'react-helmet';
@@ -119,10 +118,12 @@ function WorkProgress() {
       if (sortColumn) {
         const columnA = a[sortColumn];
         const columnB = b[sortColumn];
-        if (sortOrder === 'asc') {
-          return columnA.localeCompare(columnB);
+        if (!isNaN(columnA) && !isNaN(columnB)) {
+          // If both values are numerical, compare them directly
+          return sortOrder === 'asc' ? columnA - columnB : columnB - columnA;
         } else {
-          return columnB.localeCompare(columnA);
+          // If one of the values is not numerical, use localeCompare
+          return sortOrder === 'asc' ? columnA.localeCompare(columnB) : columnB.localeCompare(columnA);
         }
       }
       return 0;
@@ -167,14 +168,13 @@ function WorkProgress() {
             </table>
           </div>
         </div>
-       
-      </div>
-                 <Pagination
+        <Pagination
         totalItems={data.length}
         itemsPerPage={itemsPerPage}
         currentPage={currentPage}
         paginate={paginate}
       />
+      </div>
       </div>
       
       
