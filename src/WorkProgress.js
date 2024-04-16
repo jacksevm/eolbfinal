@@ -113,7 +113,7 @@ function WorkProgress() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['PH'].toLowerCase().startsWith(searchTerm)) // Filter based on LC Number column
+    .filter(item => item['PH'].startsWith(searchTerm)) // Filter based on LC Number column
     .sort((a, b) => {
       if (sortColumn) {
         const columnA = a[sortColumn];
