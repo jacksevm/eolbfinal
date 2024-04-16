@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 function Search({ handleSearch }) {
   return (
     <div className="search-container">
-      <input type="text" className="search-input" placeholder="Search LC Number..." onChange={handleSearch} />
+      <input type="text" className="search-input" placeholder="Search PH Number..." onChange={handleSearch} />
     </div>
   );
 }
@@ -52,7 +52,7 @@ function WorkProgress() {
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
   useEffect(() => {
-    fetch('https://sheetdb.io/api/v1/dtks9g5i190ug') // Replace with your actual endpoint URL
+    fetch('API_URL') // Replace with your actual endpoint URL
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -70,7 +70,7 @@ function WorkProgress() {
       .catch(apiError => {
         console.error('Error fetching data from API:', apiError);
         // If API fetch fails, fetch local data instead
-        fetch('./data/eolbdata.json') // Replace with the correct path to your local data file
+        fetch('./data/workprogress.json') // Replace with the correct path to your local data file
           .then(response => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
@@ -114,7 +114,7 @@ function WorkProgress() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['LC Number'].toLowerCase().startsWith(searchTerm)) // Filter based on LC Number column
+    .filter(item => item['PH'].toString().startsWith(searchTerm)) // Adjust filtering to work with numerical values
     .sort((a, b) => {
       if (sortColumn) {
         const columnA = a[sortColumn];
@@ -144,7 +144,7 @@ function WorkProgress() {
                 <tr>
                   {headings.map((heading, index) => (
                     // Exclude rendering ID column
-                    heading !== 'ID' && (
+                    heading !== 'Sno' && (
                       <th key={index} onClick={() => handleSort(heading)} className={sortColumn === heading ? `sortable ${sortOrder}` : 'sortable'}>
                         {heading}
                       </th>
@@ -157,7 +157,7 @@ function WorkProgress() {
                   <tr key={rowIndex}>
                     {headings.map((heading, colIndex) => (
                       // Exclude rendering ID column
-                      heading !== 'ID' && (
+                      heading !== 'Sno' && (
                         <td key={colIndex}>{item[heading]}</td>
                       )
                     ))}
