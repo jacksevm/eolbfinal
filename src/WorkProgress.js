@@ -51,7 +51,7 @@ function WorkProgress() {
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
   useEffect(() => {
-    fetch('https://sheetdb.io/api/v1/59p75ldrkkxzi') // Replace with your actual endpoint URL
+    fetch('Enter API_URL') // Replace with your actual endpoint URL
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -69,7 +69,7 @@ function WorkProgress() {
       .catch(apiError => {
         console.error('Error fetching data from API:', apiError);
         // If API fetch fails, fetch local data instead
-        fetch('./data/eolbchecklistdata.json') // Replace with the correct path to your local data file
+        fetch('./data/workprogress.json') // Replace with the correct path to your local data file
           .then(response => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
