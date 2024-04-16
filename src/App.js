@@ -6,6 +6,7 @@ import Home from './Home';
 import EOLB from './EOLB';
 import NewHeader from './NewHeader';
 import EolbChecklist from './EolbChecklist';
+import WorkProgress from './WorkProgress';
 
 
 
@@ -25,6 +26,7 @@ function App() {
      <NewHeader />
      <Routes>
      <Route path="/" element={<Home /> } />
+ <Route path="/workprogress" element={<WorkProgress /> } />
      <Route path="/eolb" element={<EOLB /> } />
      <Route path="/eolbchecklist" element={<EolbChecklist /> } />
      
