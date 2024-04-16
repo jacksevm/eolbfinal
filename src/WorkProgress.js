@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 function Search({ handleSearch }) {
   return (
     <div className="search-container">
-      <input type="text" className="search-input" placeholder="Search PH Number..." onChange={handleSearch} />
+      <input type="text" className="search-input" placeholder="Search PH Number or Descrption of Work..." onChange={handleSearch} />
     </div>
   );
 }
@@ -113,7 +113,7 @@ function WorkProgress() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['PH'].toString().startsWith(searchTerm)) // Adjust filtering to work with numerical values
+    .filter(item => (item['PH'].toString().startsWith(searchTerm)||item['Description of the work'].toString().startsWith(searchTerm))) // Adjust filtering to work with numerical values
     .sort((a, b) => {
       if (sortColumn) {
         const columnA = a[sortColumn];
