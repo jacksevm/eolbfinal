@@ -113,7 +113,7 @@ function WorkProgress() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => (item['PH'].toString().startsWith(searchTerm)||item['Description of the work'].toString().startsWith(searchTerm))) // Adjust filtering to work with numerical values
+    .filter(item => item['PH'].toString().startsWith(searchTerm)) // Adjust filtering to work with numerical values
     .sort((a, b) => {
       if (sortColumn) {
         const columnA = a[sortColumn];
