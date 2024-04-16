@@ -20,9 +20,10 @@
 
 .scrollable-table th,
 .scrollable-table td {
-  border: 1px solid #ddd;
+   border: 1px solid #ddd;
   padding: 8px;
   white-space: nowrap; /* Prevent line breaks within table cells */
+  word-wrap: break-word; /* Wrap long words within table cells */
  
 }
 
