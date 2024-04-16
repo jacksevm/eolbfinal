@@ -40,7 +40,7 @@ function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
   );
 }
 
-function EOLB() {
+function EolbChecklist() {
   const [data, setData] = useState([]);
   const [tableHeading, setTableHeading] = useState([]);
   const [headings, setHeadings] = useState([]);
@@ -180,4 +180,4 @@ function EOLB() {
   );
 }
 
-export default EOLB;
+export default EolbChecklist;
