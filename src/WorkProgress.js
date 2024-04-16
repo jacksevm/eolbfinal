@@ -113,7 +113,7 @@ function WorkProgress() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['LC Number'].toLowerCase().startsWith(searchTerm)) // Filter based on LC Number column
+    .filter(item => item['PH'].toLowerCase().startsWith(searchTerm)) // Filter based on LC Number column
     .sort((a, b) => {
       if (sortColumn) {
         const columnA = a[sortColumn];
@@ -143,7 +143,7 @@ function WorkProgress() {
                 <tr>
                   {headings.map((heading, index) => (
                     // Exclude rendering ID column
-                    heading !== 'ID' && (
+                    heading !== 'Sno' && (
                       <th key={index} onClick={() => handleSort(heading)} className={sortColumn === heading ? `sortable ${sortOrder}` : 'sortable'}>
                         {heading}
                       </th>
