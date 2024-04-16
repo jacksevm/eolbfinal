@@ -26,7 +26,7 @@ import { Helmet } from 'react-helmet';
 function Search({ handleSearch }) {
   return (
     <div className="search-container">
-      <input type="text" className="search-input" placeholder="Search LC Number..." onChange={handleSearch} />
+      <input type="text" className="search-input" placeholder="Search PH Number..." onChange={handleSearch} />
     </div>
   );
 }
@@ -134,7 +134,7 @@ function WorkProgress() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['PH Number'].toString().startsWith(searchTerm)) // Filter based on LC Number column
+    .filter(item => item['PH'].toString().startsWith(searchTerm)) // Filter based on LC Number column
     .sort((a, b) => {
       if (sortColumn) {
         const columnA = a[sortColumn];
