@@ -111,3 +111,7 @@
   white-space: normal;
   word-wrap: break-word;
 }
+.data-table tr {
+  white-space: normal;
+  word-wrap: break-word;
+}
