@@ -1,30 +1,26 @@
-
 /* Table styles */
 .table-container {
   max-height: 600px; /* Adjust the height as needed */
- 
   overflow-x: auto; /* Enable Horizontal scroll */
 }
 
 .table-wrapper {
   overflow-x: auto; /* Make the table horizontally scrollable */
   max-width: 100%; /* Ensure that the table wrapper does not exceed the viewport width */
-  overflow-y: auto; /* Make the table horizontally scrollable */
+  overflow-y: auto; /* Make the table vertically scrollable */
 }
 
 .scrollable-table {
   min-width: 100%; /* Ensure that the table always fills the width of its container */
   border-collapse: collapse;
- 
 }
 
 .scrollable-table th,
 .scrollable-table td {
-   border: 1px solid #ddd;
+  border: 1px solid #ddd;
   padding: 8px;
   white-space: nowrap; /* Prevent line breaks within table cells */
   word-wrap: break-word; /* Wrap long words within table cells */
- 
 }
 
 /* Pagination styles */
@@ -65,7 +61,6 @@
 
 /* Search bar styles */
 .search-container {
- 
   padding: 20px; /* Add padding to the search container */
 }
 
@@ -76,15 +71,16 @@
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 @keyframes shine {
   0% {
-    color: blue /* Start with white color */
+    color: blue; /* Start with white color */
   }
   50% {
     color: greenyellow; /* Transition to gold color */
   }
   75% {
-    color:grey /* Back to white color */
+    color: grey; /* Back to white color */
   }
 }
 
@@ -108,6 +104,7 @@
 .sortable.desc::after {
   content: ' ▼';
 }
+
 .data-table th {
   white-space: normal;
   word-wrap: break-word;
