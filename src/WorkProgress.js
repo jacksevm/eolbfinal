@@ -143,7 +143,7 @@ function WorkProgress() {
                 <tr>
                   {headings.map((heading, index) => (
                     // Exclude rendering ID column
-                      heading !== 'Sno' && (
+                       (
                       <th key={index} onClick={() => handleSort(heading)} className={sortColumn === heading ? `sortable ${sortOrder}` : 'sortable'}>
                         {heading}
                       </th>
@@ -156,7 +156,7 @@ function WorkProgress() {
                   <tr key={rowIndex}>
                     {headings.map((heading, colIndex) => (
                       // Exclude rendering ID column
-                     heading !== 'Sno'  (
+                      (
                         <td key={colIndex}>{item[heading]}</td>
                       )
                     ))}
