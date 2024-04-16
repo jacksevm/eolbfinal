@@ -19,9 +19,32 @@ function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
 
   return (
     <div className="pagination-container">
+import React, { useEffect, useState } from 'react';
+import './Table.css'; // Make sure to create some basic styles for the cards in App.css
+import { Helmet } from 'react-helmet';
+// Search component
+function Search({ handleSearch }) {
+  return (
+    <div className="search-container">
+      <input type="text" className="search-input" placeholder="Search LC Number..." onChange={handleSearch} />
+    </div>
+  );
+}
+
+// Pagination component
+function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
+  const pageNumbers = [];
+
+  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+
+  return (
+    <div className="pagination-container">
       <Helmet>
-         <title>EOLB Check List</title>
+         <title>EOLB Data</title>
         <meta name="description" content="Google Sheet Interface for Chennai Division" />
+        {/* Add more meta tags, link tags, or other head elements as needed */}
       </Helmet>
       <nav>
         <ul className="pagination">
@@ -44,12 +67,12 @@ function WorkProgress() {
   const [headings, setHeadings] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(5);
+  const [itemsPerPage] = useState(5); // Change as needed
   const [sortColumn, setSortColumn] = useState(null);
-  const [sortOrder, setSortOrder] = useState('asc');
+  const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
   useEffect(() => {
-    fetch('Enter API_URL')
+    fetch('API_URL') // Replace with your actual endpoint URL
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -61,12 +84,13 @@ function WorkProgress() {
         if (data.length > 0) {
           const sheetHeadings = Object.keys(data[0]);
           setHeadings(sheetHeadings);
-          setTableHeading('Data From Google Sheet');
+          setTableHeading('Data From Google Sheet')
         }
       })
       .catch(apiError => {
         console.error('Error fetching data from API:', apiError);
-        fetch('./data/workprogress.json')
+        // If API fetch fails, fetch local data instead
+        fetch('./data/eolbdata.json') // Replace with the correct path to your local data file
           .then(response => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
@@ -78,7 +102,7 @@ function WorkProgress() {
             if (data.length > 0) {
               const sheetHeadings = Object.keys(data[0]);
               setHeadings(sheetHeadings);
-              setTableHeading('Data From Local Table');
+              setTableHeading('Data From Local Table')
             }
           })
           .catch(localError => {
@@ -86,13 +110,14 @@ function WorkProgress() {
           });
       });
   }, []);
-
+  // Function to handle search
   const handleSearch = event => {
     const searchTerm = event.target.value.toLowerCase();
     setSearchTerm(searchTerm);
-    setCurrentPage(1);
+    setCurrentPage(1); // Reset pagination to first page when searching
   };
 
+  // Function to handle sorting
   const handleSort = column => {
     if (sortColumn === column) {
       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
@@ -102,18 +127,23 @@ function WorkProgress() {
     }
   };
 
+  // Function to handle pagination
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
+  // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['PH'].toString().startsWith(searchTerm)) // Adjust filtering to work with numerical values
+    .filter(item => item['PH Number'].toString().startsWith(searchTerm)) // Filter based on LC Number column
     .sort((a, b) => {
       if (sortColumn) {
         const columnA = a[sortColumn];
         const columnB = b[sortColumn];
-        const comparison = sortOrder === 'asc' ? 1 : -1;
-        return columnA - columnB * comparison; // Ensure proper numerical sorting
+        if (sortOrder === 'asc') {
+          return columnA.localeCompare(columnB);
+        } else {
+          return columnB.localeCompare(columnA);
+        }
       }
       return 0;
     })
@@ -121,30 +151,34 @@ function WorkProgress() {
 
   return (
     <div className='App'>
-      <h1 className="heading">{tableHeading}</h1>
-      <div className="table-container">
-        <Search handleSearch={handleSearch} />
+       <h1 className="heading">{tableHeading}</h1>
+  <div className="table-container">
+      
+ 
+
+<Search handleSearch={handleSearch} />
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
               <thead>
                 <tr>
                   {headings.map((heading, index) => (
-                     heading !== 'Sno' && (
-                    <th key={index} onClick={() => handleSort(heading)} className={sortColumn === heading ? `sortable ${sortOrder}` : 'sortable'}>
-                      {heading}
-                    </th>
-)
+                    // Exclude rendering ID column
+                    heading !== 'Sno' && (
+                      <th key={index} onClick={() => handleSort(heading)} className={sortColumn === heading ? `sortable ${sortOrder}` : 'sortable'}>
+                        {heading}
+                      </th>
+                    )
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {currentItems.map((item, rowIndex) => (
-                   heading !== 'Sno' && (
                   <tr key={rowIndex}>
                     {headings.map((heading, colIndex) => (
-                       
-                      <td key={colIndex}>{item[heading]}</td>
+                      // Exclude rendering ID column
+                      heading !== 'Sno' && (
+                        <td key={colIndex}>{item[heading]}</td>
                       )
                     ))}
                   </tr>
@@ -153,15 +187,21 @@ function WorkProgress() {
             </table>
           </div>
         </div>
-        <Pagination
-          totalItems={data.length}
-          itemsPerPage={itemsPerPage}
-          currentPage={currentPage}
-          paginate={paginate}
-        />
+       
       </div>
-    </div>
+                 <Pagination
+        totalItems={data.length}
+        itemsPerPage={itemsPerPage}
+        currentPage={currentPage}
+        paginate={paginate}
+      />
+      </div>
+      
+      
+      
   );
 }
 
 export default WorkProgress;
+
+    
