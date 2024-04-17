@@ -143,6 +143,7 @@ function EolbChecklist() {
       <h1 className="heading">{tableHeading}</h1>
       <div className="table-container">
         <Search handleSearch={handleSearch} />
+    <a href="https://docs.google.com/spreadsheets/d/your-google-sheet-id">Link to Google Sheet</a>
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
