@@ -140,8 +140,13 @@ function EolbChecklist() {
 
   return (
     <div className='App'>
-      <h1 className="heading">{tableHeading}</h1>
       <div className="table-container">
+        <div className="button-container">
+          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/your-google-sheet-id", '_blank')}>
+            Open Google Sheets
+          </button>
+        </div>
+        <h1 className="heading">{tableHeading}</h1>
         <Search handleSearch={handleSearch} />
         <div className="table-wrapper">
           <div className="scrollable-table">
@@ -180,11 +185,6 @@ function EolbChecklist() {
         currentPage={currentPage}
         paginate={paginate}
       />
-      <div className="button-container">
-        <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/your-google-sheet-id", '_blank')}>
-          Open Google Sheets
-        </button>
-      </div>
     </div>
   );
 }
