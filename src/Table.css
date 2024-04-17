@@ -119,7 +119,7 @@ User
 /* Other styles... */
 
 .button-container {
-  position: absolute;
+  position:left;
   top: 30px;
   right: 10px;
 }
