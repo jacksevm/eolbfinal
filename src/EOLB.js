@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Table.css'; // Make sure to create some basic styles for the cards in App.css
 import { Helmet } from 'react-helmet';
+
 // Search component
 function Search({ handleSearch }) {
   return (
@@ -21,7 +22,7 @@ function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
   return (
     <div className="pagination-container">
       <Helmet>
-         <title>EOLB Data</title>
+        <title>EOLB Data</title>
         <meta name="description" content="Google Sheet Interface for Chennai Division" />
         {/* Add more meta tags, link tags, or other head elements as needed */}
       </Helmet>
@@ -51,7 +52,7 @@ function EOLB() {
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
   useEffect(() => {
-    fetch('https://sheetdb.io/api/v1/dtks9g5i190u') // Replace with your actual endpoint URL
+    fetch('https://sheet2api.com/v1/yhQYMB3ATSiA/eolb-status') // Replace with your actual endpoint URL
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -63,7 +64,10 @@ function EOLB() {
         if (data.length > 0) {
           const sheetHeadings = Object.keys(data[0]);
           setHeadings(sheetHeadings);
-          setTableHeading('Data From Google Sheet')
+          setTableHeading('Data From Google Sheet');
+          // If initial sorting is required, set the initial sortColumn and sortOrder here
+          // setSortColumn('columnName');
+          // setSortOrder('asc');
         }
       })
       .catch(apiError => {
@@ -81,7 +85,10 @@ function EOLB() {
             if (data.length > 0) {
               const sheetHeadings = Object.keys(data[0]);
               setHeadings(sheetHeadings);
-              setTableHeading('Data From Local Table')
+              setTableHeading('Data From Local Table');
+              // If initial sorting is required, set the initial sortColumn and sortOrder here
+              // setSortColumn('columnName');
+              // setSortOrder('asc');
             }
           })
           .catch(localError => {
@@ -89,6 +96,7 @@ function EOLB() {
           });
       });
   }, []);
+
   // Function to handle search
   const handleSearch = event => {
     const searchTerm = event.target.value.toLowerCase();
@@ -113,29 +121,28 @@ function EOLB() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['LC Number'].toLowerCase().startsWith(searchTerm)) // Filter based on LC Number column
+    .filter(item => item['LC Number'].toString().startsWith(searchTerm)) // Filter based on LC Number column
     .sort((a, b) => {
-      if (sortColumn) {
-        const columnA = a[sortColumn];
-        const columnB = b[sortColumn];
-        if (sortOrder === 'asc') {
-          return columnA.localeCompare(columnB);
+      if (sortColumn !== null) {
+        const columnA = String(a[sortColumn]).toLowerCase(); // Convert to lowercase
+        const columnB = String(b[sortColumn]).toLowerCase(); // Convert to lowercase
+        if (!isNaN(columnA) && !isNaN(columnB)) {
+          // If both values are numerical, compare them directly
+          return sortOrder === 'asc' ? columnA - columnB : columnB - columnA;
         } else {
-          return columnB.localeCompare(columnA);
+          // If one of the values is not numerical, use localeCompare
+          return sortOrder === 'asc' ? columnA.localeCompare(columnB) : columnB.localeCompare(columnA);
         }
       }
-      return 0;
+      return 0; // If sortColumn is null, return 0 to maintain the current order
     })
     .slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <div className='App'>
-       <h1 className="heading">{tableHeading}</h1>
-  <div className="table-container">
-      
- 
-
-<Search handleSearch={handleSearch} />
+      <h1 className="heading">{tableHeading}</h1>
+      <div className="table-container">
+        <Search handleSearch={handleSearch} />
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
@@ -166,18 +173,14 @@ function EOLB() {
             </table>
           </div>
         </div>
-       
       </div>
-                 <Pagination
+      <Pagination
         totalItems={data.length}
         itemsPerPage={itemsPerPage}
         currentPage={currentPage}
         paginate={paginate}
       />
-      </div>
-      
-      
-      
+    </div>
   );
 }
 
