@@ -124,8 +124,8 @@ function EOLB() {
     .filter(item => item['LC Number'].toString().startsWith(searchTerm)) // Filter based on LC Number column
     .sort((a, b) => {
       if (sortColumn !== null) {
-        const columnA = a[sortColumn];
-        const columnB = b[sortColumn];
+        const columnA = String(a[sortColumn]).toLowerCase(); // Convert to lowercase
+        const columnB = String(b[sortColumn]).toLowerCase(); // Convert to lowercase
         if (!isNaN(columnA) && !isNaN(columnB)) {
           // If both values are numerical, compare them directly
           return sortOrder === 'asc' ? columnA - columnB : columnB - columnA;
