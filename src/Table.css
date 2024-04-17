@@ -7,7 +7,7 @@
 .table-wrapper {
   overflow-x: auto; /* Make the table horizontally scrollable */
   max-width: 100%; /* Ensure that the table wrapper does not exceed the viewport width */
-  overflow-y: auto; /* Make the table vertically scrollable */
+ 
 }
 
 .scrollable-table {
