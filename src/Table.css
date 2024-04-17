@@ -3,12 +3,14 @@ User
 .table-container {
   max-height: 600px; /* Adjust the height as needed */
   overflow-x: auto; /* Enable Horizontal scroll */
+ 
+  
 }
 
 .table-wrapper {
   overflow-x: auto; /* Make the table horizontally scrollable */
   max-width: 100%; /* Ensure that the table wrapper does not exceed the viewport width */
- 
+  padding: 10px;
 }
 
 .scrollable-table {
@@ -117,12 +119,9 @@ User
 /* Table.css */
 
 /* Other styles... */
-
 .button-container {
-  position:left;
-  top: 30px;
-  right: 10px;
-}
+  padding: 10px; /* Add padding to the search container */
+  }
 
 .google-sheets-button {
   padding: 10px 20px;

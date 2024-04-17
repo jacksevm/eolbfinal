@@ -143,6 +143,11 @@ function EOLB() {
       <h1 className="heading">{tableHeading}</h1>
       <div className="table-container">
         <Search handleSearch={handleSearch} />
+        <div className="button-container">
+          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1M7YeJcjV5tJQxNR2mnsdqblVWThcFQUS9OptnZSIhf0/edit#gid=0", '_blank')}>
+            Open Google Sheet
+          </button>
+        </div>
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
