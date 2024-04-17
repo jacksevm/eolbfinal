@@ -1,3 +1,4 @@
+User
 /* Table styles */
 .table-container {
   max-height: 600px; /* Adjust the height as needed */
@@ -109,4 +110,31 @@
 .data-table th {
   white-space: normal;
   word-wrap: break-word;
+}
+
+/* Table.css */
+
+/* Table.css */
+
+/* Other styles... */
+
+.button-container {
+  position:left;
+  top: 30px;
+  right: 10px;
+}
+
+.google-sheets-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-sheets-button:hover {
+  background-color: #0056b3;
 }
