@@ -110,3 +110,30 @@
   white-space: normal;
   word-wrap: break-word;
 }
+
+/* Table.css */
+
+/* Other styles... */
+
+.button-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px; /* Adjust as needed */
+}
+
+.google-sheets-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-sheets-button:hover {
+  background-color: #0056b3;
+}
+
