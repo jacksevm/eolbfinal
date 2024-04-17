@@ -1,19 +1,16 @@
-/* Table.css */
-
-/* Table container styles */
+User
+/* Table styles */
 .table-container {
   max-height: 600px; /* Adjust the height as needed */
-  overflow-x: auto; /* Enable horizontal scroll if needed */
-  position: relative; /* Ensure relative positioning for absolute positioning of button container */
+  overflow-x: auto; /* Enable Horizontal scroll */
 }
 
-/* Table wrapper styles */
 .table-wrapper {
   overflow-x: auto; /* Make the table horizontally scrollable */
   max-width: 100%; /* Ensure that the table wrapper does not exceed the viewport width */
+ 
 }
 
-/* Table styles */
 .scrollable-table {
   min-width: 100%; /* Ensure that the table always fills the width of its container */
   border-collapse: collapse;
@@ -26,6 +23,7 @@
   white-space: normal; /* Allow content to wrap within table cells */
   word-wrap: break-word; /* Ensure long words break and wrap to next line */
 }
+
 
 /* Pagination styles */
 .pagination-container {
@@ -76,19 +74,31 @@
   box-sizing: border-box;
 }
 
-/* Heading animation styles */
+@keyframes shine {
+  0% {
+    color: blue; /* Start with white color */
+  }
+  50% {
+    color: greenyellow; /* Transition to gold color */
+  }
+  75% {
+    color: grey; /* Back to white color */
+  }
+}
+
+/* Apply animation to the heading */
 .heading {
   animation: shine 5s ease infinite; /* Apply the shining animation */
   text-align: center; /* Align the heading to the center */
   text-decoration: underline; /* Underline the heading */
 }
 
-/* Clickable column header styles */
+/* Add styles for clickable column headers */
 .sortable {
   cursor: pointer;
 }
 
-/* Sort order indication styles */
+/* Add styles for indicating sort order */
 .sortable.asc::after {
   content: ' ▲';
 }
@@ -97,14 +107,23 @@
   content: ' ▼';
 }
 
-/* Button container styles */
-.button-container {
-  position: absolute;
-  top: -50px; /* Adjust this value to position the button container just above the table */
-  right: 20px; /* Adjust this value to position the button container on the right side */
+.data-table th {
+  white-space: normal;
+  word-wrap: break-word;
 }
 
-/* Button styles */
+/* Table.css */
+
+/* Table.css */
+
+/* Other styles... */
+
+.button-container {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+}
+
 .google-sheets-button {
   padding: 10px 20px;
   font-size: 16px;
