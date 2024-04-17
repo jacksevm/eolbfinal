@@ -51,7 +51,7 @@ function EOLB() {
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
   useEffect(() => {
-    fetch('https://sheetdb.io/api/v1/dtks9g5i190ug') // Replace with your actual endpoint URL
+    fetch('https://sheet2api.com/v1/yhQYMB3ATSiA/eolb-status') // Replace with your actual endpoint URL
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -113,21 +113,22 @@ function EOLB() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['LC Number'].toLowerCase().startsWith(searchTerm)) // Filter based on LC Number column
+    .filter(item => item['LC Number'].toString().startsWith(searchTerm)) // Filter based on LC Number column
     .sort((a, b) => {
       if (sortColumn) {
         const columnA = a[sortColumn];
         const columnB = b[sortColumn];
-        if (sortOrder === 'asc') {
-          return columnA.localeCompare(columnB);
+        if (!isNaN(columnA) && !isNaN(columnB)) {
+          // If both values are numerical, compare them directly
+          return sortOrder === 'asc' ? columnA - columnB : columnB - columnA;
         } else {
-          return columnB.localeCompare(columnA);
+          // If one of the values is not numerical, use localeCompare
+          return sortOrder === 'asc' ? columnA.localeCompare(columnB) : columnB.localeCompare(columnA);
         }
       }
       return 0;
     })
     .slice(indexOfFirstItem, indexOfLastItem);
-
   return (
     <div className='App'>
        <h1 className="heading">{tableHeading}</h1>
