@@ -433,7 +433,7 @@
       "Description of the work": "Provision of Integrated emergency response management system in Chennai division\r\n  Reach-I - 26 stations\r\n  Reach-II – 17 stations\r\n  Reach-III – 31 stations",
       "Initial year of inclusion": "2016-17",
       "LAW/PB/ Umbrella": "LAW",
-      "Item no. of PB/LAW/ Umbrella": "821,822,823,824,825,826,827,828,829,830,831,\r\n832,833,834, and 835 of LAW 2023-24 (15 works)",
+      "Item no. of PB/LAW/ Umbrella": "821,822,823,824,825,826,\r\n 827,828,829,830,831,\r\n 832,833,834, \r\n and 835 of LAW 2023-24 (15 works)",
       "Sanctioned latest cost & Allocation": "348500 (CAP (Nirb)",
       "Commulative Expenditure up to 31.03.2023 (In 000's)": 14757,
       "Expenditure in budget year 2023-24": 52122,
@@ -933,7 +933,7 @@
     },
     {
       "Sno": 64,
-      "PH":"nil"
+      "PH":0,
       "Description of the work": "Implementation of Hospital Management Information system (HMIS) at HQ RH/PER & DRH/AJJ in Chennai division (Phase- I).",
       "Initial year of inclusion": "2021-22",
       "LAW/PB/ Umbrella": "Fund provided by CN",
