@@ -11,9 +11,6 @@ function Search({ handleSearch }) {
   );
 }
 
-
-export default GoogleSheetLink;
-
 // Pagination component
 function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
   const pageNumbers = [];
@@ -146,7 +143,6 @@ function EolbChecklist() {
       <h1 className="heading">{tableHeading}</h1>
       <div className="table-container">
         <Search handleSearch={handleSearch} />
-   
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
