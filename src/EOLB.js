@@ -51,7 +51,7 @@ function EOLB() {
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
   useEffect(() => {
-    fetch('https://sheetdb.io/api/v1/dtks9g5i190ug') // Replace with your actual endpoint URL
+    fetch('https://sheetdb.io/api/v1/dtks9g5i190u') // Replace with your actual endpoint URL
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
