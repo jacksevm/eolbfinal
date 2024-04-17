@@ -41,7 +41,7 @@ function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
   );
 }
 
-function Eolbchecklist() {
+function EolbChecklist() {
   const [data, setData] = useState([]);
   const [tableHeading, setTableHeading] = useState([]);
   const [headings, setHeadings] = useState([]);
