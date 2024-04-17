@@ -181,7 +181,7 @@ function EolbChecklist() {
         paginate={paginate}
       />
       <div className="button-container">
-        <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1JsatGGwuro0x8hyPizzxJT-IIFGZz01gVHqaMHDz9LM/edit#gid=0", '_blank')}>
+        <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/your-google-sheet-id", '_blank')}>
           Open Google Sheets
         </button>
       </div>
