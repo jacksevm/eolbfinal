@@ -11,6 +11,17 @@ function Search({ handleSearch }) {
   );
 }
 
+//Google Link Componenet
+function GoogleSheetLink() {
+  const googleSheetUrl = "https://docs.google.com/spreadsheets/d/your-google-sheet-id";
+
+  return (
+    <button onClick={() => window.open(https://docs.google.com/spreadsheets/d/1JsatGGwuro0x8hyPizzxJT-IIFGZz01gVHqaMHDz9LM/edit#gid=0, '_blank')}>Open Google Sheets</button>
+  );
+}
+
+export default GoogleSheetLink;
+
 // Pagination component
 function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
   const pageNumbers = [];
@@ -143,7 +154,8 @@ function EolbChecklist() {
       <h1 className="heading">{tableHeading}</h1>
       <div className="table-container">
         <Search handleSearch={handleSearch} />
-    <a href="https://docs.google.com/spreadsheets/d/1JsatGGwuro0x8hyPizzxJT-IIFGZz01gVHqaMHDz9LM/edit#gid=0">Link to Google Sheet</a>
+    <GoogleSheetLink />
+   
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
