@@ -68,3 +68,7 @@
     text-decoration: underline;
   }
   
+  .menu-title {
+    font-size: 18px;
+    margin-right: 10px;
+  }

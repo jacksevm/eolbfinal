@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Align cards horizontally at the center */
+  min-height: 100vh; /* Ensure the container fills the height of the viewport */
 }
 
 .card {
@@ -11,8 +12,10 @@
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
-  width: 250px; /* Adjust the width as needed */
+  width: 300px; /* Adjust the width as needed */
   margin: 10px; /* Add margin between cards */
+  height: 400px; /* Adjust the width as needed */
+  margin-top: 40px;
 }
 
 .card:hover {
@@ -26,9 +29,10 @@
 
 .card-info {
   padding: 16px;
+  text-align: center;
 }
 
-.card-info h2 {
+.card-info h3 {
   margin-top: 0;
 }
 

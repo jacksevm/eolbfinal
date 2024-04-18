@@ -139,7 +139,7 @@ function EolbChecklist() {
     .slice(indexOfFirstItem, indexOfLastItem);
 
   return (
-    <div className='App'>
+    
       <div className="table-container">
         <h1 className="heading">{tableHeading}</h1>
         <Search handleSearch={handleSearch} />
@@ -148,6 +148,12 @@ function EolbChecklist() {
             Open Google Sheet
           </button>
         </div>
+        <Pagination
+        totalItems={data.length}
+        itemsPerPage={itemsPerPage}
+        currentPage={currentPage}
+        paginate={paginate}
+      />
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
@@ -178,14 +184,10 @@ function EolbChecklist() {
             </table>
           </div>
         </div>
+        
       </div>
-      <Pagination
-        totalItems={data.length}
-        itemsPerPage={itemsPerPage}
-        currentPage={currentPage}
-        paginate={paginate}
-      />
-    </div>
+      
+    
   );
 }
 

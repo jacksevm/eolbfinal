@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Table.css'; // Make sure to create some basic styles for the cards in App.css
 import { Helmet } from 'react-helmet';
+import Footer from './Footer';
 
 // Search component
 function Search({ handleSearch }) {
@@ -140,14 +141,18 @@ function EOLB() {
 
   return (
     <div className='App'>
+    <div className='container'>
       <h1 className="heading">{tableHeading}</h1>
+      
       <div className="table-container">
         <Search handleSearch={handleSearch} />
+       
         <div className="button-container">
           <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1M7YeJcjV5tJQxNR2mnsdqblVWThcFQUS9OptnZSIhf0/edit#gid=0", '_blank')}>
             Open Google Sheet
           </button>
         </div>
+       
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
@@ -176,6 +181,7 @@ function EOLB() {
                 ))}
               </tbody>
             </table>
+           
           </div>
         </div>
       </div>
@@ -185,7 +191,11 @@ function EOLB() {
         currentPage={currentPage}
         paginate={paginate}
       />
+    
     </div>
+    <Footer />
+    </div>
+    
   );
 }
 

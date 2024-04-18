@@ -13,7 +13,8 @@ const NewHeader = () => {
     <header className="header">
       <h3>Google sheet Interface</h3>
       <nav className="nav">
-        <button className="hamburger-btn" onClick={toggleMenu}>
+      <div className="menu-title">Menu</div>
+        <button className="hamburger-btn" onClick={toggleMenu} title="Menu">
           <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}></div>
           <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}></div>
           <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}></div>

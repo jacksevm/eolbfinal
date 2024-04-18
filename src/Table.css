@@ -1,7 +1,13 @@
 User
 /* Table styles */
+.containers{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container fills the height of the viewport */
+}
+
 .table-container {
-  max-height: 600px; /* Adjust the height as needed */
+ 
   overflow-x: auto; /* Enable Horizontal scroll */
  
   

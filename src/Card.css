@@ -10,6 +10,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
+}
+.cards-info {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .App {
