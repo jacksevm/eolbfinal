@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Table.css'; // Make sure to create some basic styles for the cards in App.css
 import { Helmet } from 'react-helmet';
+import Footer from './Footer';
 
 // Search component
 function Search({ handleSearch }) {
@@ -139,21 +140,19 @@ function EolbChecklist() {
     .slice(indexOfFirstItem, indexOfLastItem);
 
   return (
-    
+    <div className='App'>
+    <div className='container'>
+      <h1 className="heading">{tableHeading}</h1>
+      
       <div className="table-container">
-        <h1 className="heading">{tableHeading}</h1>
         <Search handleSearch={handleSearch} />
+       
         <div className="button-container">
           <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1JsatGGwuro0x8hyPizzxJT-IIFGZz01gVHqaMHDz9LM/edit#gid=0", '_blank')}>
             Open Google Sheet
           </button>
         </div>
-        <Pagination
-        totalItems={data.length}
-        itemsPerPage={itemsPerPage}
-        currentPage={currentPage}
-        paginate={paginate}
-      />
+       
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
@@ -182,11 +181,20 @@ function EolbChecklist() {
                 ))}
               </tbody>
             </table>
+           
           </div>
         </div>
-        
       </div>
-      
+      <Pagination
+        totalItems={data.length}
+        itemsPerPage={itemsPerPage}
+        currentPage={currentPage}
+        paginate={paginate}
+      />
+    
+    </div>
+    <Footer />
+    </div>
     
   );
 }
