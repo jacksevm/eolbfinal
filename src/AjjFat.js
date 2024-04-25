@@ -161,7 +161,7 @@ function AjjFat() {
                 <tr>
                   {headings.map((heading, index) => (
                     // Exclude rendering ID column
-                    heading !== 'ID' && (
+                    heading !== 'Id' && (
                       <th key={index} onClick={() => handleSort(heading)} className={sortColumn === heading ? `sortable ${sortOrder}` : 'sortable'}>
                         {heading}
                       </th>
