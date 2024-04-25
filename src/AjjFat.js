@@ -3,14 +3,7 @@ import './Table.css'; // Make sure to create some basic styles for the cards in 
 import { Helmet } from 'react-helmet';
 import Footer from './Footer';
 
-// Search component
-function Search({ handleSearch }) {
-  return (
-    <div className="search-container">
-      <input type="text" className="search-input" placeholder="Search Route Number or Sheet Number..." onChange={handleSearch} />
-    </div>
-  );
-}
+
 
 // Pagination component
 function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
@@ -46,7 +39,7 @@ function AjjFat() {
   const [data, setData] = useState([]);
   const [tableHeading, setTableHeading] = useState([]);
   const [headings, setHeadings] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+ 
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(5); // Change as needed
   const [sortColumn, setSortColumn] = useState(null);
@@ -98,12 +91,7 @@ function AjjFat() {
       });
   }, []);
 
-  // Function to handle search
-  const handleSearch = event => {
-    const searchTerm = event.target.value.toLowerCase();
-    setSearchTerm(searchTerm);
-    setCurrentPage(1); // Reset pagination to first page when searching
-  };
+ 
 
   // Function to handle sorting
   const handleSort = column => {
@@ -145,7 +133,7 @@ function AjjFat() {
       <h1 className="heading">{tableHeading}</h1>
       
       <div className="table-container">
-        <Search handleSearch={handleSearch} />
+      
        
         <div className="button-container">
           <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1lyQ_YlLwnXfDkhkj_0OBeWy1Yxifmm94oOva6fne62Q/edit#gid=0", '_blank')}>
