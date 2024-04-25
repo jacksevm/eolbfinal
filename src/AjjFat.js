@@ -154,7 +154,7 @@ function AjjFat() {
         </div>
        
         <div className="table-wrapper">
-          <div className="scrollable-table-auto">
+          <div className="scrollable-table">
             <table className="data-table-autowidth">
               <thead>
                 <tr>
