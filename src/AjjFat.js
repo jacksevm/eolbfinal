@@ -122,7 +122,7 @@ function AjjFat() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['Route Tested'].toString().includes(searchTerm) || item['Sheet Number'].toString().includes(searchTerm)) 
+    .filter(item => item['Route Tested '].toString().includes(searchTerm) || item['Sheet Number'].toString().includes(searchTerm)) 
     // Filter based on Route Testd or Sheet Number
     .sort((a, b) => {
       if (sortColumn !== null) {
