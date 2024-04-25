@@ -97,10 +97,11 @@ function AjjFat() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => 
-      item['Route Tested '].toString().toLowerCase().includes(searchTerm) || 
-      item['Sheet Number'].toString().toLowerCase().includes(searchTerm)
-    ) // Filter based on Route Tested or Sheet Number
+    .filter(item => {
+      const routeTested = item['Route Tested '] ? item['Route Tested '].toString().toLowerCase() : '';
+      const sheetNumber = item['Sheet Number'] ? item['Sheet Number'].toString().toLowerCase() : '';
+      return routeTested.includes(searchTerm) || sheetNumber.includes(searchTerm);
+    }) // Filter based on Route Tested or Sheet Number
     .sort((a, b) => {
       if (sortColumn === 'Sheet Number') {
         // Special handling for sorting by "Sheet Number" column
