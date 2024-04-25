@@ -122,8 +122,7 @@ function AjjFat() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['Route Tested '].toString().includes(searchTerm) || item['Sheet Number'].toString().includes(searchTerm)) 
-    // Filter based on Route Testd or Sheet Number
+    .filter(item => item['LC Number'].toString().startsWith(searchTerm)) // Filter based on LC Number column
     .sort((a, b) => {
       if (sortColumn !== null) {
         const columnA = String(a[sortColumn]).toLowerCase(); // Convert to lowercase
@@ -139,7 +138,7 @@ function AjjFat() {
       return 0; // If sortColumn is null, return 0 to maintain the current order
     })
     .slice(indexOfFirstItem, indexOfLastItem);
-
+  
   return (
     <div className='App'>
     <div className='container'>
