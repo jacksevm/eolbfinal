@@ -15,7 +15,7 @@
   "Tested On": "24-04-2024",
   "Checked By": "D.Jackson Pereira",
   "Designation ": "SSE\/SIG\/SW\/MAS",
-  "Deficiency noticed": "1. No Physical Bit for W100 BT & W6T \r 2. Approach Locking is not Effective When Both 96AR alone Down"
+  "Deficiency noticed": "1. No Physical Bit for W100 BT & W6T \n2. Approach Locking is not Effective When Both 96AR alone Down"
  },
  {
   "Sno": 3,
@@ -77,7 +77,7 @@
   "Tested On": "25-04-2024",
   "Checked By": "D.Jackson Pereira",
   "Designation ": "SSE\/SIG\/SW\/MAS",
-  "Deficiency noticed": "1. No Physical Bit for W100 BT & W6T \n 2. Approach Locking is not Effective when Both 96AR alone Down.\n3.CHR 21 W 125 N is not effective when 107 is Normal"
+  "Deficiency noticed": "1. No Physical Bit for W100 BT & W6T \n2. Approach Locking is not Effective when Both 96AR alone Down.\n3.CHR 21 W 125 N is not effective when 107 is Normal"
  },
  {
   "Sno": 10,
@@ -112,7 +112,7 @@
   "Tested On": "25-04-2024",
   "Checked By": "D.Jackson Pereira",
   "Designation ": "SSE\/SIG\/SW\/MAS",
-  "Deficiency noticed": "1.C99 T Not effective\n 2.No Physical bit available for 143T & 14 CT \n 3.99AR not Proved\n4.Removal of 99A RG not Effective"
+  "Deficiency noticed": "1.C99 T Not effective\n2.No Physical bit available for 143T & 14 CT \n3.99AR not Proved\n4.Removal of 99A RG not Effective"
  },
  {
   "Sno": 14,
