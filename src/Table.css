@@ -116,7 +116,7 @@ User
 }
 
 .data-table th,
-.data-table th {
+.data-table td {
   white-space: normal;
   word-wrap: break-word;
 }
