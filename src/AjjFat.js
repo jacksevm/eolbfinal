@@ -97,18 +97,21 @@ function AjjFat() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['Route Tested '].toString().includes(searchTerm) || item['Sheet Number'].toString().includes(searchTerm)) // Filter based on Route Tested or Sheet Number
+    .filter(item => 
+      item['Route Tested '].toString().includes(searchTerm) || 
+      item['Sheet Number'].toString().includes(searchTerm)
+    ) // Filter based on Route Tested or Sheet Number
     .sort((a, b) => {
-      if (sortColumn) {
+      if (sortColumn === 'Sheet Number') {
+        // Special handling for sorting by "Sheet Number" column
+        const columnA = parseInt(a['Sheet Number']);
+        const columnB = parseInt(b['Sheet Number']);
+        return sortOrder === 'asc' ? columnA - columnB : columnB - columnA;
+      } else if (sortColumn) {
+        // General sorting based on other columns
         const columnA = a[sortColumn];
         const columnB = b[sortColumn];
-        if (!isNaN(columnA) && !isNaN(columnB)) {
-          // If both values are numerical, compare them directly
-          return sortOrder === 'asc' ? columnA - columnB : columnB - columnA;
-        } else {
-          // If one of the values is not numerical, use localeCompare
-          return sortOrder === 'asc' ? columnA.localeCompare(columnB) : columnB.localeCompare(columnA);
-        }
+        return sortOrder === 'asc' ? columnA.localeCompare(columnB) : columnB.localeCompare(columnA);
       }
       return 0;
     })
