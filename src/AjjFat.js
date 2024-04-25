@@ -7,7 +7,7 @@ import Footer from './Footer';
 function Search({ handleSearch }) {
   return (
     <div className="search-container">
-      <input type="text" className="search-input" placeholder="Search LC Number..." onChange={handleSearch} />
+      <input type="text" className="search-input" placeholder="Search Route Number..." onChange={handleSearch} />
     </div>
   );
 }
@@ -122,7 +122,7 @@ function AjjFat() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['Route Tested '].toString().includes(searchTerm) || item['Sheet Number'].toString().includes(searchTerm) ) // Filter based on LC Number column
+    .filter(item => item['Route Tested '].toString().startsWith(searchTerm)) // Filter based on LC Number column
     .sort((a, b) => {
       if (sortColumn !== null) {
         const columnA = String(a[sortColumn]).toLowerCase(); // Convert to lowercase
