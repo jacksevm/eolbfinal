@@ -8,6 +8,7 @@ import EOLB from './EOLB';
 import NewHeader from './NewHeader';
 import EolbChecklist from './EolbChecklist';
 import WorkProgress from './WorkProgress';
+import WorkProgress from './Ajjfat';
 import './App.css'; // Import the CSS file
 
 
@@ -25,7 +26,7 @@ function App() {
         <Route path="/workprogress" element={<WorkProgress />} />
         <Route path="/eolb" element={<EOLB />} />
         <Route path="/eolbchecklist" element={<EolbChecklist />} />
-        <Route path="/ajjfattesting" element={<AjjFat />} />
+        <Route path="/ajjfat" element={<AjjFat />} />
       </Routes>
      
     </div>
