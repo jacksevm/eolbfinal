@@ -122,9 +122,11 @@ User
    
 }
 .data-table-autowidth th,
-.data-table-autowidth td {
+.data-table-autowidth td,
+.last-child {
   white-space: normal;
   word-wrap: break-word;
+  width:25%; 
 
    
 }
