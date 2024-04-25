@@ -23,6 +23,10 @@ User
   min-width: 100%; /* Ensure that the table always fills the width of its container */
   border-collapse: collapse;
 }
+.scrollable-table-auto {
+  min-width: auto; /* Ensure that the table always fills the width of its container */
+  border-collapse: collapse;
+}
 
 .scrollable-table th,
 .scrollable-table td {
@@ -126,8 +130,6 @@ User
 .last-child {
   white-space: normal;
   word-wrap: break-word;
-  width:25%; 
-
    
 }
 
