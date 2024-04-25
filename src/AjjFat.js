@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Table.css'; // Make sure to create some basic styles for the cards in App.css
 import { Helmet } from 'react-helmet';
+
 // Search component
 function Search({ handleSearch }) {
   return (
     <div className="search-container">
-      <input type="text" className="search-input" placeholder="Search PH Number or Description of Work..." onChange={handleSearch} />
+      <input type="text" className="search-input" placeholder="Search Route Tested or Sheet Number..." onChange={handleSearch} />
     </div>
   );
 }
@@ -21,7 +22,7 @@ function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
   return (
     <div className="pagination-container">
       <Helmet>
-         <title>Work Progress</title>
+        <title>Work Progress</title>
         <meta name="description" content="Google Sheet Interface for Chennai Division" />
         {/* Add more meta tags, link tags, or other head elements as needed */}
       </Helmet>
@@ -42,7 +43,7 @@ function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
 
 function AjjFat() {
   const [data, setData] = useState([]);
-  const [tableHeading, setTableHeading] = useState([]);
+  const [tableHeading, setTableHeading] = useState('');
   const [headings, setHeadings] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -51,7 +52,8 @@ function AjjFat() {
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
   useEffect(() => {
-    fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vT-WAbXQAo19jeQfITY8CXrfpjr3WIfijtNS9ykxaN0N9HSNk0yI2s70tKtjS61rQ8zMoT6jR2KkZu1/pubhtml') // Replace with your actual endpoint URL
+    // Fetch data from the provided JSON URL or local file
+    fetch('./data/ajjfatdata.json') // Change to the correct path for your local data file
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -63,32 +65,14 @@ function AjjFat() {
         if (data.length > 0) {
           const sheetHeadings = Object.keys(data[0]);
           setHeadings(sheetHeadings);
-          setTableHeading('Data From Google Sheet')
+          setTableHeading('Data From Local Table');
         }
       })
-      .catch(apiError => {
-        console.error('Error fetching data from API:', apiError);
-        // If API fetch fails, fetch local data instead
-        fetch('./data/ajjfatdata.json') // Replace with the correct path to your local data file
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
-            }
-            return response.json();
-          })
-          .then(data => {
-            setData(data);
-            if (data.length > 0) {
-              const sheetHeadings = Object.keys(data[0]);
-              setHeadings(sheetHeadings);
-              setTableHeading('Data From Local Table')
-            }
-          })
-          .catch(localError => {
-            console.error('Error fetching local data:', localError);
-          });
+      .catch(error => {
+        console.error('Error fetching data:', error);
       });
   }, []);
+
   // Function to handle search
   const handleSearch = event => {
     const searchTerm = event.target.value.toLowerCase();
@@ -113,7 +97,7 @@ function AjjFat() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['PH'].toString().startsWith(searchTerm) || item['Description of the work'].toLowerCase().includes(searchTerm)) // Filter based on PH Number or Description of the Work
+    .filter(item => item['Route Tested '].toString().includes(searchTerm) || item['Sheet Number'].toString().includes(searchTerm)) // Filter based on Route Tested or Sheet Number
     .sort((a, b) => {
       if (sortColumn) {
         const columnA = a[sortColumn];
@@ -132,12 +116,9 @@ function AjjFat() {
 
   return (
     <div className='App'>
-       <h1 className="heading">{tableHeading}</h1>
-  <div className="table-container">
-      
- 
-
-<Search handleSearch={handleSearch} />
+      <h1 className="heading">{tableHeading}</h1>
+      <div className="table-container">
+        <Search handleSearch={handleSearch} />
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
@@ -169,16 +150,13 @@ function AjjFat() {
           </div>
         </div>
         <Pagination
-        totalItems={data.length}
-        itemsPerPage={itemsPerPage}
-        currentPage={currentPage}
-        paginate={paginate}
-      />
+          totalItems={data.length}
+          itemsPerPage={itemsPerPage}
+          currentPage={currentPage}
+          paginate={paginate}
+        />
       </div>
-      </div>
-      
-      
-      
+    </div>
   );
 }
 
