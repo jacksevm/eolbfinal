@@ -122,7 +122,7 @@ function AjjFat() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['LC Number'].toString().startsWith(searchTerm)) // Filter based on LC Number column
+   
     .sort((a, b) => {
       if (sortColumn !== null) {
         const columnA = String(a[sortColumn]).toLowerCase(); // Convert to lowercase
