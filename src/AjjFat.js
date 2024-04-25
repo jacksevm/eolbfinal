@@ -155,7 +155,7 @@ function AjjFat() {
        
         <div className="table-wrapper">
           <div className="scrollable-table">
-            <table className="data-table-autowidth">
+            <table className="data-table-autowidth" style="width:75%">
               <thead>
                 <tr>
                   {headings.map((heading, index) => (
