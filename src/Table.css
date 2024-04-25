@@ -143,3 +143,9 @@ User
 .google-sheets-button:hover {
   background-color: #0056b3;
 }
+
+/* Apply the wrapping styles only to the last column's td elements */
+.scrollable-table td:last-child {
+  white-space: normal;
+  word-wrap: break-word;
+}
