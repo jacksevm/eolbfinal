@@ -119,6 +119,7 @@ User
 .data-table td {
   white-space: normal;
   word-wrap: break-word;
+   width: 25%; /* Set an equal width for all table cells */
 }
 
 /* Table.css */
