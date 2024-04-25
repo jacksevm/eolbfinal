@@ -122,7 +122,7 @@ function AjjFat() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['Route Tested '].toString().startsWith(searchTerm)) // Filter based on LC Number column
+    .filter(item => item['Route Tested '].toString().startsWith(searchTerm) || item['Sheet Number'].toString().startsWith(searchTerm) ) // Filter based on LC Number column
     .sort((a, b) => {
       if (sortColumn !== null) {
         const columnA = String(a[sortColumn]).toLowerCase(); // Convert to lowercase
@@ -148,7 +148,7 @@ function AjjFat() {
         <Search handleSearch={handleSearch} />
        
         <div className="button-container">
-          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1M7YeJcjV5tJQxNR2mnsdqblVWThcFQUS9OptnZSIhf0/edit#gid=0", '_blank')}>
+          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1lyQ_YlLwnXfDkhkj_0OBeWy1Yxifmm94oOva6fne62Q/edit#gid=0", '_blank')}>
             Open Google Sheet
           </button>
         </div>
