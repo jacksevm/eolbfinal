@@ -25,6 +25,7 @@ const NewHeader = () => {
             <li><Link to="/workprogress" onClick={toggleMenu}>Work Progress</Link></li>
             <li><Link to="/eolb" onClick={toggleMenu}>EOLB</Link></li>
             <li><Link to="/eolbchecklist" onClick={toggleMenu}>EOLB Pre-com Check lists</Link></li>
+          <li><Link to="/ajjfat" onClick={toggleMenu}>AJJ FAT Details</Link></li>
           </ul>
         )}
       </nav>
