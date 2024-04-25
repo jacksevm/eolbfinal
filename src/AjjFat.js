@@ -54,7 +54,7 @@ function AjjFat() {
 
   useEffect(() => {
     // Fetch data
-    fetch('URL') // Replace with your actual endpoint URL
+    fetch(''./data/ajjfatdata.json') // Replace with your actual endpoint URL
       .then(response => response.json())
       .then(data => {
         setData(data);
