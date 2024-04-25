@@ -25,6 +25,7 @@ function App() {
         <Route path="/workprogress" element={<WorkProgress />} />
         <Route path="/eolb" element={<EOLB />} />
         <Route path="/eolbchecklist" element={<EolbChecklist />} />
+        <Route path="/ajjfattesting" element={<AjjFat />} />
       </Routes>
      
     </div>
