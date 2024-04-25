@@ -115,6 +115,7 @@ User
   content: ' ▼';
 }
 
+.data-table th,
 .data-table th {
   white-space: normal;
   word-wrap: break-word;
