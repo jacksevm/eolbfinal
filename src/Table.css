@@ -1,12 +1,16 @@
+User
 /* Table styles */
-.containers {
+.containers{
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure the container fills the height of the viewport */
 }
 
 .table-container {
+ 
   overflow-x: auto; /* Enable Horizontal scroll */
+ 
+  
 }
 
 .table-wrapper {
@@ -28,11 +32,6 @@
   word-wrap: break-word; /* Ensure long words break and wrap to next line */
 }
 
-/* Apply the wrapping styles only to the last column's td elements */
-.scrollable-table td:last-child {
-  white-space: normal;
-  word-wrap: break-word;
-}
 
 /* Pagination styles */
 .pagination-container {
@@ -121,10 +120,14 @@
   word-wrap: break-word;
 }
 
+/* Table.css */
+
+/* Table.css */
+
 /* Other styles... */
 .button-container {
   padding: 10px; /* Add padding to the search container */
-}
+  }
 
 .google-sheets-button {
   padding: 10px 20px;
@@ -140,3 +143,4 @@
 .google-sheets-button:hover {
   background-color: #0056b3;
 }
+
