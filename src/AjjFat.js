@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './Table.css'; // Make sure to create some basic styles for the cards in App.css
 import { Helmet } from 'react-helmet';
-import Footer from './Footer';
-
-
+// Search component
+function Search({ handleSearch }) {
+  return (
+    <div className="search-container">
+      <input type="text" className="search-input" placeholder="Search PH Number or Description of Work..." onChange={handleSearch} />
+    </div>
+  );
+}
 
 // Pagination component
 function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
@@ -16,7 +21,7 @@ function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
   return (
     <div className="pagination-container">
       <Helmet>
-        <title>AJJ FAT TESTING DATA</title>
+         <title>Work Progress</title>
         <meta name="description" content="Google Sheet Interface for Chennai Division" />
         {/* Add more meta tags, link tags, or other head elements as needed */}
       </Helmet>
@@ -39,14 +44,14 @@ function AjjFat() {
   const [data, setData] = useState([]);
   const [tableHeading, setTableHeading] = useState([]);
   const [headings, setHeadings] = useState([]);
- 
+  const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(5); // Change as needed
   const [sortColumn, setSortColumn] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
   useEffect(() => {
-    fetch('URL') // Replace with your actual endpoint URL
+    fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vT-WAbXQAo19jeQfITY8CXrfpjr3WIfijtNS9ykxaN0N9HSNk0yI2s70tKtjS61rQ8zMoT6jR2KkZu1/pubhtml') // Replace with your actual endpoint URL
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -58,16 +63,13 @@ function AjjFat() {
         if (data.length > 0) {
           const sheetHeadings = Object.keys(data[0]);
           setHeadings(sheetHeadings);
-          setTableHeading('Data From Google Sheet');
-          // If initial sorting is required, set the initial sortColumn and sortOrder here
-          // setSortColumn('columnName');
-          // setSortOrder('asc');
+          setTableHeading('Data From Google Sheet')
         }
       })
       .catch(apiError => {
         console.error('Error fetching data from API:', apiError);
         // If API fetch fails, fetch local data instead
-        fetch('./data/ajjfatdata.json') // Replace with the correct path to your local data file
+        fetch('./data/workprogress.json') // Replace with the correct path to your local data file
           .then(response => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
@@ -79,10 +81,7 @@ function AjjFat() {
             if (data.length > 0) {
               const sheetHeadings = Object.keys(data[0]);
               setHeadings(sheetHeadings);
-              setTableHeading('Data From Local Table');
-              // If initial sorting is required, set the initial sortColumn and sortOrder here
-              // setSortColumn('columnName');
-              // setSortOrder('asc');
+              setTableHeading('Data From Local Table')
             }
           })
           .catch(localError => {
@@ -90,8 +89,12 @@ function AjjFat() {
           });
       });
   }, []);
-
- 
+  // Function to handle search
+  const handleSearch = event => {
+    const searchTerm = event.target.value.toLowerCase();
+    setSearchTerm(searchTerm);
+    setCurrentPage(1); // Reset pagination to first page when searching
+  };
 
   // Function to handle sorting
   const handleSort = column => {
@@ -110,11 +113,11 @@ function AjjFat() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-   
+    .filter(item => item['PH'].toString().startsWith(searchTerm) || item['Description of the work'].toLowerCase().includes(searchTerm)) // Filter based on PH Number or Description of the Work
     .sort((a, b) => {
-      if (sortColumn !== null) {
-        const columnA = String(a[sortColumn]).toLowerCase(); // Convert to lowercase
-        const columnB = String(b[sortColumn]).toLowerCase(); // Convert to lowercase
+      if (sortColumn) {
+        const columnA = a[sortColumn];
+        const columnB = b[sortColumn];
         if (!isNaN(columnA) && !isNaN(columnB)) {
           // If both values are numerical, compare them directly
           return sortOrder === 'asc' ? columnA - columnB : columnB - columnA;
@@ -123,24 +126,18 @@ function AjjFat() {
           return sortOrder === 'asc' ? columnA.localeCompare(columnB) : columnB.localeCompare(columnA);
         }
       }
-      return 0; // If sortColumn is null, return 0 to maintain the current order
+      return 0;
     })
     .slice(indexOfFirstItem, indexOfLastItem);
-  
+
   return (
     <div className='App'>
-    <div className='container'>
-      <h1 className="heading">{tableHeading}</h1>
+       <h1 className="heading">{tableHeading}</h1>
+  <div className="table-container">
       
-      <div className="table-container">
-      
-       
-        <div className="button-container">
-          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1lyQ_YlLwnXfDkhkj_0OBeWy1Yxifmm94oOva6fne62Q/edit#gid=0", '_blank')}>
-            Open Google Sheet
-          </button>
-        </div>
-       
+ 
+
+<Search handleSearch={handleSearch} />
         <div className="table-wrapper">
           <div className="scrollable-table">
             <table className="data-table">
@@ -148,7 +145,7 @@ function AjjFat() {
                 <tr>
                   {headings.map((heading, index) => (
                     // Exclude rendering ID column
-                    heading !== 'Id' && (
+                    heading !== 'Sno' && (
                       <th key={index} onClick={() => handleSort(heading)} className={sortColumn === heading ? `sortable ${sortOrder}` : 'sortable'}>
                         {heading}
                       </th>
@@ -161,7 +158,7 @@ function AjjFat() {
                   <tr key={rowIndex}>
                     {headings.map((heading, colIndex) => (
                       // Exclude rendering ID column
-                      heading !== 'Id' && (
+                      heading !== 'Sno' && (
                         <td key={colIndex}>{item[heading]}</td>
                       )
                     ))}
@@ -169,21 +166,19 @@ function AjjFat() {
                 ))}
               </tbody>
             </table>
-           
           </div>
         </div>
-      </div>
-      <Pagination
+        <Pagination
         totalItems={data.length}
         itemsPerPage={itemsPerPage}
         currentPage={currentPage}
         paginate={paginate}
       />
-    
-    </div>
-    <Footer />
-    </div>
-    
+      </div>
+      </div>
+      
+      
+      
   );
 }
 
