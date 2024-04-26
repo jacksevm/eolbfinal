@@ -118,26 +118,26 @@ function AjjFat() {
   // Function to handle pagination
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
-  // Get current items
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = data
-    .filter(item => item['Route Tested'].toString().startsWith(searchTerm)) // Filter based on LC Number column
-    .sort((a, b) => {
-      if (sortColumn !== null) {
-        const columnA = String(a[sortColumn]).toLowerCase(); // Convert to lowercase
-        const columnB = String(b[sortColumn]).toLowerCase(); // Convert to lowercase
-        if (!isNaN(columnA) && !isNaN(columnB)) {
-          // If both values are numerical, compare them directly
-          return sortOrder === 'asc' ? columnA - columnB : columnB - columnA;
-        } else {
-          // If one of the values is not numerical, use localeCompare
-          return sortOrder === 'asc' ? columnA.localeCompare(columnB) : columnB.localeCompare(columnA);
-        }
+ // Get current items
+const indexOfLastItem = currentPage * itemsPerPage;
+const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+const currentItems = data
+  .filter(item => item['Route Tested'] && item['Route Tested'].toString().startsWith(searchTerm)) // Add check for undefined
+  .sort((a, b) => {
+    if (sortColumn !== null) {
+      const columnA = String(a[sortColumn]).toLowerCase(); // Convert to lowercase
+      const columnB = String(b[sortColumn]).toLowerCase(); // Convert to lowercase
+      if (!isNaN(columnA) && !isNaN(columnB)) {
+        // If both values are numerical, compare them directly
+        return sortOrder === 'asc' ? columnA - columnB : columnB - columnA;
+      } else {
+        // If one of the values is not numerical, use localeCompare
+        return sortOrder === 'asc' ? columnA.localeCompare(columnB) : columnB.localeCompare(columnA);
       }
-      return 0; // If sortColumn is null, return 0 to maintain the current order
-    })
-    .slice(indexOfFirstItem, indexOfLastItem);
+    }
+    return 0; // If sortColumn is null, return 0 to maintain the current order
+  })
+  .slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <div className='App'>
