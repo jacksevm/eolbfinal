@@ -155,7 +155,7 @@ const currentItems = data
        
         <div className="table-wrapper">
           <div className="scrollable-table">
-            <table className="data-table">
+            <table className="data-table-autowidth">
               <thead>
                 <tr>
                   {headings.map((heading, index) => (
