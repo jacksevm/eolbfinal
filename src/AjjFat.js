@@ -44,15 +44,20 @@ function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
 
 function AjjFat() {
   const [data, setData] = useState([]);
-  const [tableHeading, setTableHeading] = useState([]);
+  const [tableHeading, setTableHeading] = useState('');
   const [headings, setHeadings] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(5); // Change as needed
   const [sortColumn, setSortColumn] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
+    setLoading(true);
+    setError(null);
+
     fetch('https://sheet2api.com/v1/yhQYMB3ATSiA/eolb-statu') // Replace with your actual endpoint URL
       .then(response => {
         if (!response.ok) {
@@ -70,9 +75,12 @@ function AjjFat() {
           // setSortColumn('columnName');
           // setSortOrder('asc');
         }
+        setLoading(false);
       })
       .catch(apiError => {
         console.error('Error fetching data from API:', apiError);
+        setError(apiError);
+        setLoading(false);
         // If API fetch fails, fetch local data instead
         fetch('./data/ajjfatdata.json') // Replace with the correct path to your local data file
           .then(response => {
@@ -91,9 +99,12 @@ function AjjFat() {
               // setSortColumn('columnName');
               // setSortOrder('asc');
             }
+            setLoading(false);
           })
           .catch(localError => {
             console.error('Error fetching local data:', localError);
+            setError(localError);
+            setLoading(false);
           });
       });
   }, []);
@@ -122,7 +133,7 @@ function AjjFat() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['Route Tested'].toString().startsWith(searchTerm)) // Filter based on LC Number column
+    .filter(item => item['Route Tested'].toString().toLowerCase().includes(searchTerm)) // Filter based on LC Number column
     .sort((a, b) => {
       if (sortColumn !== null) {
         const columnA = String(a[sortColumn]).toLowerCase(); // Convert to lowercase
@@ -138,6 +149,9 @@ function AjjFat() {
       return 0; // If sortColumn is null, return 0 to maintain the current order
     })
     .slice(indexOfFirstItem, indexOfLastItem);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
 
   return (
     <div className='App'>
