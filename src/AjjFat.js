@@ -133,7 +133,7 @@ function AjjFat() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data
-    .filter(item => item['Route Tested'].toString().toLowerCase().includes(searchTerm)) // Filter based on LC Number column
+    .filter(item => item['Route Tested'] && item['Route Tested'].toString().toLowerCase().includes(searchTerm)) // Add a null check
     .sort((a, b) => {
       if (sortColumn !== null) {
         const columnA = String(a[sortColumn]).toLowerCase(); // Convert to lowercase
@@ -150,8 +150,13 @@ function AjjFat() {
     })
     .slice(indexOfFirstItem, indexOfLastItem);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <div className='App'>
@@ -195,7 +200,6 @@ function AjjFat() {
                 ))}
               </tbody>
             </table>
-           
           </div>
         </div>
       </div>
