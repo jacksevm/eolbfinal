@@ -1,4 +1,4 @@
-mport React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Table.css'; // Make sure to create some basic styles for the cards in App.css
 import { Helmet } from 'react-helmet';
 import Footer from './Footer';
