@@ -1,9 +1,262 @@
 [
  {
- "Sno": 1,
+  "Sno": 1,
   "Route Tested": "63 To C",
   "Sheet Number": 112,
   "Tested On": "24-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "Nil",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 2,
+  "Route Tested": "96A to E1",
+  "Sheet Number": 151,
+  "Tested On": "24-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1. No Physical Bit for W100 BT & W6T \n\n2. Approach Locking is not Effective When 96AR alone Down",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 3,
+  "Route Tested": "96B to C",
+  "Sheet Number": 155,
+  "Tested On": "24-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "Nil",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 4,
+  "Route Tested": "63 to D",
+  "Sheet Number": 113,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "Nil",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 5,
+  "Route Tested": "63 to E",
+  "Sheet Number": 113,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "Nil",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 6,
+  "Route Tested": "63 to F",
+  "Sheet Number": 114,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1.Sig 63 flew back after a delay when Point 121 Detection breaks",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 7,
+  "Route Tested": "63 to H",
+  "Sheet Number": 115,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1.Sig 63 flew back after a delay when Point 121 Detection breaks",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 8,
+  "Route Tested": "63 to J",
+  "Sheet Number": 116,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1.Sig 63 flew back after a delay when Point 119 Detection breaks",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 9,
+  "Route Tested": "96A to E",
+  "Sheet Number": 150,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1. No Physical Bit for W100 BT & W6T \n\n2. Approach Locking is not Effective when 96AR alone Down.\n\n3.CHR 21 W 125 N is not effective when 107 is Normal",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 10,
+  "Route Tested": "96B to D",
+  "Sheet Number": 156,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "Nil",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 11,
+  "Route Tested": "95A to KJ",
+  "Sheet Number": 148,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "Approach Locking is not Effective When  96AR alone Down",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 12,
+  "Route Tested": "95B to KJ",
+  "Sheet Number": 148,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "98A RG removal is not effective",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 13,
+  "Route Tested": "91 to NJ",
+  "Sheet Number": 146,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1.C99 T Not effective\n\n2.No Physical bit available for 143T & 14 CT\n \n3.99AR not Proved\n\n4.Removal of 99A RG not Effective",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 14,
+  "Route Tested": "92 to NJ",
+  "Sheet Number": 146,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1.No Physical bit fot 14T.Hence unable to Test TSR\n\n2.When C99T dropped 99AR also dropped.",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 15,
+  "Route Tested": "93 to S3",
+  "Sheet Number": 146,
+  "Tested On": "25-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1.Back locking is not effective.\nNo indication available in Panel",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 16,
+  "Route Tested": "94B to Y        ",
+  "Sheet Number": 147,
+  "Tested On": "26-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1.96A RG Removal not effective\n\n2. Physical bit not available for Approach Locking T\/ckts.\n\n3.Indication not available for Approach T\/ckts.Combined bit given for W106BT\/103AT.\n",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 17
+ },
+ {
+  "Sno": 18,
+  "Route Tested": "97A to D",
+  "Sheet Number": 159,
+  "Tested On": "26-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "Nil",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 19,
+  "Route Tested": "97A to E1",
+  "Sheet Number": 160,
+  "Tested On": "26-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "Nil",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 20,
+  "Route Tested": "97B to C",
+  "Sheet Number": 161,
+  "Tested On": "26-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "In 146R & 150N condition bit 146R cannot be break. ",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 21,
+  "Route Tested": "97B to D",
+  "Sheet Number": 161,
+  "Tested On": "26-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "Nil",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 22,
+  "Route Tested": "98A to C",
+  "Sheet Number": 163,
+  "Tested On": "26-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1.No Physical Bit available for Approach Lock T\/ckts\n\n2.When C96T occupies indicaion of 98AR also showing Red Indication\n\n3.98AR not listed in TC",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 23,
+  "Route Tested": "98A to D",
+  "Sheet Number": 164,
+  "Tested On": "26-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1.No Physical Bit available for Approach Lock T\/ckts\n\n2.When C96T occupies indicaion of 98AR also showing Red Indication\n\n3.98AR not listed in TC",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 24,
+  "Route Tested": "98A to F1",
+  "Sheet Number": 166,
+  "Tested On": "26-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1.No Physical Bit available for Approach Lock T\/ckts\n\n2.When C96T occupies indicaion of 98AR also showing Red Indication\n\n3.98AR not listed in TC",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 25,
+  "Route Tested": "98A to J1",
+  "Sheet Number": 167,
+  "Tested On": "26-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "1.No Physical Bit available for Approach Lock T\/ckts\n\n2.When C96T occupies indicaion of 98AR also showing Red Indication\n\n3.98AR not listed in TC",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 26,
+  "Route Tested": "98B to C",
+  "Sheet Number": 169,
+  "Tested On": "26-04-2024",
+  "Checked By": "D.Jackson Pereira",
+  "Designation ": "SSE\/SIG\/SW\/MAS",
+  "Deficiency noticed by Rly Rep": "Nil",
+  "Remarks of Firm's Rep": "Yet to be Obtained"
+ },
+ {
+  "Sno": 27,
+  "Route Tested": "98B to D",
+  "Sheet Number": 170,
+  "Tested On": "26-04-2024",
   "Checked By": "D.Jackson Pereira",
   "Designation ": "SSE\/SIG\/SW\/MAS",
   "Deficiency noticed by Rly Rep": "Nil",
