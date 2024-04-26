@@ -135,6 +135,7 @@ User
 
 .data-table-autowidth td:nth-child(6) {
   width: 25%;
+  word-wrap: break-word;
 }
 
 /* Table.css */
