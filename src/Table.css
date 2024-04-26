@@ -133,7 +133,7 @@ User
    
 }
 
-.data-table-autowidth td:last-child {
+.data-table-autowidth td:nth-child(6) {
   width: 25%;
 }
 
