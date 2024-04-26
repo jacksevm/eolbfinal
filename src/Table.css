@@ -121,14 +121,14 @@ User
 
 .data-table th,
 .data-table td {
-  white-space: normal;
+  white-space: pre;
   word-wrap: break-word;
    
 }
 .data-table-autowidth th,
 .data-table-autowidth td,
 {
-  white-space: normal;
+  white-space: pre;
   word-wrap: break-word;
   
    
