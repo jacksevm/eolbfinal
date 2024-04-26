@@ -74,7 +74,7 @@ function AjjFat() {
       .catch(apiError => {
         console.error('Error fetching data from API:', apiError);
         // If API fetch fails, fetch local data instead
-        fetch('./data/workprogress.json') // Replace with the correct path to your local data file
+        fetch('./data/ajjfatdata.json') // Replace with the correct path to your local data file
           .then(response => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
