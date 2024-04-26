@@ -32,7 +32,7 @@ User
 .scrollable-table td {
   border: 1px solid #ddd;
   padding: 8px;
-  white-space: normal; /* Allow content to wrap within table cells */
+  white-space: pre; /* Allow content to wrap within table cells */
   word-wrap: break-word; /* Ensure long words break and wrap to next line */
 }
 
