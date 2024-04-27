@@ -23,6 +23,7 @@ function Home() {
              </div>
           </Link>
         </div>
+       
         <div className="card">
           <Link to="/eolbchecklist">
             <img src={process.env.PUBLIC_URL + '/img/eolbchecklist.png'} alt="EOLB Pre Commissioning Check Lists" />
@@ -32,7 +33,16 @@ function Home() {
             </div>
           </Link>
         </div>
-       
+
+   <div className="card">
+          <Link to="/ajjfat">
+            <img src={process.env.PUBLIC_URL + '/img/fattesting.png'} alt="AJJ FAT Testing" />
+            <div className="card-info">
+              <h3>AJJ FAT Testing</h3>
+             
+            </div>
+          </Link>
+        </div>
       </div>
       <Footer />
       </div>
