@@ -32,7 +32,7 @@ User
 .scrollable-table td {
   border: 1px solid #ddd;
   padding: 8px;
-  white-space: pre; /* Allow content to wrap within table cells */
+  white-space: pre-wrap; /* Allow content to wrap within table cells */
   word-wrap: break-word; /* Ensure long words break and wrap to next line */
 }
 
@@ -121,14 +121,14 @@ User
 
 .data-table th,
 .data-table td {
-  white-space: pre;
+  white-space: pre-wrap;
   word-wrap: break-word;
    
 }
 .data-table-autowidth th,
 .data-table-autowidth td,
 {
-  white-space: pre;
+  white-space: pre-wrap;
   word-wrap: break-word;
   
    
