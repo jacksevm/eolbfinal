@@ -53,7 +53,7 @@ function AjjFat() {
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
   useEffect(() => {
-    fetch('https://sheet2api.com/v1/yhQYMB3ATSiA/eolb-checklis') // Replace with your actual endpoint URL
+    fetch('https://docs.google.com/spreadsheets/d/1lyQ_YlLwnXfDkhkj_0OBeWy1Yxifmm94oOva6fne62Q/edit?usp=drivesdk') // Replace with your actual endpoint URL
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
