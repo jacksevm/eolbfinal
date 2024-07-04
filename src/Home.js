@@ -35,10 +35,12 @@ function Home() {
         </div>
 
    <div className="card">
-          <Link to="/ajjfat">
+ 
+
+          <Link to="https://public.tableau.com/app/profile/jackson.pereira/viz/FailureAnalysis-MASDivision/Dashboard2">
             <img src={process.env.PUBLIC_URL + '/img/fattesting.png'} alt="AJJ FAT Testing" />
             <div className="card-info">
-              <h3>AJJ FAT Testing</h3>
+              <h3>Failure Analysis</h3>
              
             </div>
           </Link>
