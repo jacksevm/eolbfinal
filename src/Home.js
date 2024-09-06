@@ -34,7 +34,7 @@ function Home() {
           </Link>
         </div>
 
- 
+{/*
    <div className="card">
  
 
@@ -46,6 +46,7 @@ function Home() {
             </div>
           </Link>
         </div>
+        */}
       </div>
 
  
