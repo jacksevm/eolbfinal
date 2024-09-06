@@ -34,8 +34,7 @@ function Home() {
           </Link>
         </div>
 
-  <!--
-
+ 
    <div className="card">
  
 
@@ -49,7 +48,7 @@ function Home() {
         </div>
       </div>
 
-  -->
+ 
       <Footer />
       </div>
   );
