@@ -1,0 +1,28 @@
+import plotly.express as px
+import pandas as pd
+
+# Sample data for the Gantt chart
+data = [
+    dict(Task="Task 1", Start='2024-10-01', Finish='2024-10-10', Resource='Team Member A'),
+    dict(Task="Task 2", Start='2024-10-05', Finish='2024-10-15', Resource='Team Member B'),
+    dict(Task="Task 3", Start='2024-10-10', Finish='2024-10-20', Resource='Team Member C'),
+    dict(Task="Task 4", Start='2024-10-12', Finish='2024-10-22', Resource='Team Member D'),
+    dict(Task="Task 5", Start='2024-10-15', Finish='2024-10-25', Resource='Team Member A'),
+]
+
+# Convert data to a DataFrame
+df = pd.DataFrame(data)
+
+# Create Gantt chart
+fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task", color="Resource", title="Team Performance Gantt Chart")
+
+# Update the layout
+fig.update_layout(
+    xaxis_title="Date",
+    yaxis_title="Task",
+    showlegend=True,
+    height=400,
+)
+
+# Save the chart as an HTML file
+fig.write_html("team_performance_gantt.html")
