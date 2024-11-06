@@ -34,6 +34,13 @@ function Home() {
           </Link>
         </div>
 
+{/* Include HtmlViewer Component */}
+        <div className="html-container">
+          <HtmlViewer src={process.env.PUBLIC_URL + '/path/to/your/file.html'} />
+        </div>
+      </div>
+
+
 {/*
    <div className="card">
  
