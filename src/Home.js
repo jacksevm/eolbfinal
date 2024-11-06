@@ -44,7 +44,7 @@ function Home() {
 
         {/* Include HtmlViewer Component */}
         <div className="html-container">
-          <HtmlViewer src={process.env.PUBLIC_URL + 'public/data/Simple Gantt chart.htm'} />
+          <HtmlViewer src={process.env.PUBLIC_URL + '/img/Simple Gantt chart.pdf'} />
         </div>
 
         {/*
