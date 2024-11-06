@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css'; // Import the CSS file for styling
+import './Home.css';
 import { Helmet } from 'react-helmet';
 import Footer from './Footer';
-import HtmlViewer from './HtmlViewer'; // Import HtmlViewer
+import HtmlViewer from './HtmlViewer'; // Ensure this is designed to handle PDFs
 
 function Home() {
   return (
@@ -15,7 +15,6 @@ function Home() {
             name="description"
             content="Google Sheet Interface for Chennai Division"
           />
-          {/* Add more meta tags, link tags, or other head elements as needed */}
         </Helmet>
 
         <div className="card">
@@ -42,21 +41,22 @@ function Home() {
           </Link>
         </div>
 
-        {/* Include HtmlViewer Component */}
+        {/* Display PDF using HtmlViewer */}
         <div className="html-container">
           <HtmlViewer src={process.env.PUBLIC_URL + '/img/Simple Gantt chart.pdf'} />
         </div>
 
-<iframe
-  src={process.env.PUBLIC_URL + '/data/Simple Gantt chart.html'}
-  title="HTML Viewer"
-  width="100%"
-  height="600px"
-  style={{ border: 'none' }}
-/>
+        {/* Display HTML file using iframe */}
+        <iframe
+          src={process.env.PUBLIC_URL + '/data/Simple Gantt chart.html'}
+          title="HTML Viewer"
+          width="100%"
+          height="600px"
+          style={{ border: 'none' }}
+        />
 
-        {/*
-        <div className="card">
+        {/* Uncomment if needed in future */}
+        {/* <div className="card">
           <Link to="https://public.tableau.com/app/profile/jackson.pereira/viz/FailureAnalysis-MASDivision/Dashboard2">
             <img
               src={process.env.PUBLIC_URL + '/img/fattesting.png'}
@@ -66,8 +66,7 @@ function Home() {
               <h3>Failure Analysis</h3>
             </div>
           </Link>
-        </div>
-        */}
+        </div> */}
       </div>
 
       <Footer />
