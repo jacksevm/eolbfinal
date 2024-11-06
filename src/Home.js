@@ -47,6 +47,14 @@ function Home() {
           <HtmlViewer src={process.env.PUBLIC_URL + '/img/Simple Gantt chart.pdf'} />
         </div>
 
+<iframe
+  src={process.env.PUBLIC_URL + '/data/simple-gantt-chart.html'}
+  title="HTML Viewer"
+  width="100%"
+  height="600px"
+  style={{ border: 'none' }}
+/>
+
         {/*
         <div className="card">
           <Link to="https://public.tableau.com/app/profile/jackson.pereira/viz/FailureAnalysis-MASDivision/Dashboard2">
