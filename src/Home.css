@@ -60,3 +60,14 @@
   border: none; /* Remove the border of the iframe */
 }
 
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.home-image {
+  width: 100%;
+  max-width: 600px; /* You can change this to control the image size */
+  height: auto;
+}
+
