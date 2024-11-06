@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import { Helmet } from 'react-helmet';
 import Footer from './Footer';
-import HtmlViewer from './HtmlViewer'; // Ensure this is designed to handle PDFs
+
 
 function Home() {
   return (
