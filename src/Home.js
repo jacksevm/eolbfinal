@@ -43,7 +43,7 @@ function Home() {
 {/* Displaying an image */}
         <div className="image-container">
           <img
-            src={process.env.PUBLIC_URL + '/img/home-image.jpeg'} // Make sure the image is in the public/img folder
+            src={process.env.PUBLIC_URL + '/img/eolbchecklist.png'} // Make sure the image is in the public/img folder
             alt="Home Image"
             className="home-image" // You can use this class for styling
           />
