@@ -43,7 +43,7 @@ function Home() {
 {/* Displaying an image */}
         <div className="image-container">
           <img
-            src={process.env.PUBLIC_URL + '/img/eolbchecklist.png'} // Make sure the image is in the public/img folder
+            src={process.env.PUBLIC_URL + '/img/Simple Gantt chart_page-0001.jpg'} // Make sure the image is in the public/img folder
             alt="Gantt Chart" 
             className="home-image" // You can use this class for styling
           />
