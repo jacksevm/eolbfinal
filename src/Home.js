@@ -43,7 +43,7 @@ function Home() {
 
         {/* Display PDF using HtmlViewer */}
         <div className="html-container">
-          <HtmlViewer src={process.env.PUBLIC_URL + '/img/Simple Gantt chart.pdf'} />
+          <HtmlViewer src={process.env.PUBLIC_URL + 'simple gantt chart.html'} />
         </div>
 
         {/* Display HTML file using iframe */}
