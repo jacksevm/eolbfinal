@@ -41,16 +41,7 @@ function Home() {
           </Link>
         </div>
 
-  {/* Display HTML File in Iframe */}
-        <div className="html-container">
-          <iframe
-            src="/data/simple gantt chart.html" // Update with the correct path in the public folder
-            title="HTML Viewer"
-            width="100%"
-            height="600px"
-            style={{ border: 'none' }}
-          />
-        </div>
+ 
         {/* Uncomment if needed in future */}
         {/* <div className="card">
           <Link to="https://public.tableau.com/app/profile/jackson.pereira/viz/FailureAnalysis-MASDivision/Dashboard2">
