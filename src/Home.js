@@ -48,7 +48,7 @@ function Home() {
 
         {/* Display HTML file using iframe */}
         <iframe
-          src={process.env.PUBLIC_URL + '/data/Simple Gantt chart.html'}
+          src={process.env.PUBLIC_URL + '/data/simple gantt chart.html'}
           title="HTML Viewer"
           width="100%"
           height="600px"
