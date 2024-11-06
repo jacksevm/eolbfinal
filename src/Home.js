@@ -41,6 +41,15 @@ function Home() {
           </Link>
         </div>
 
+<iframe
+  src="/data/simple gantt chart.html"  // No need for process.env.PUBLIC_URL
+  title="HTML Viewer"
+  width="100%"
+  height="600px"
+  style={{ border: 'none' }}
+/>
+
+
         {/* Display PDF using HtmlViewer */}
         <div className="html-container">
           <HtmlViewer src={process.env.PUBLIC_URL + 'simple gantt chart.html'} />
