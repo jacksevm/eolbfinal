@@ -46,14 +46,6 @@ function Home() {
           <HtmlViewer src={process.env.PUBLIC_URL + 'simple gantt chart.html'} />
         </div>
 
-        {/* Display HTML file using iframe */}
-        <iframe
-          src={process.env.PUBLIC_URL + '/data/simple gantt chart.html'}
-          title="HTML Viewer"
-          width="100%"
-          height="600px"
-          style={{ border: 'none' }}
-        />
 
         {/* Uncomment if needed in future */}
         {/* <div className="card">
