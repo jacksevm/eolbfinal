@@ -40,7 +40,14 @@ function Home() {
             </div>
           </Link>
         </div>
-
+{/* Displaying an image */}
+        <div className="image-container">
+          <img
+            src={process.env.PUBLIC_URL + '/img/home-image.jpg'} // Make sure the image is in the public/img folder
+            alt="Home Image"
+            className="home-image" // You can use this class for styling
+          />
+        </div>
  
         {/* Uncomment if needed in future */}
         {/* <div className="card">
