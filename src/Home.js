@@ -40,7 +40,7 @@ function Home() {
             </div>
           </Link>
         </div>
-{/* Displaying an image */}
+{/* Displaying an image 
         <div className="image-container">
           <img
             src={process.env.PUBLIC_URL + '/img/Simple Gantt chart_page-0001.jpg'} // Make sure the image is in the public/img folder
@@ -48,7 +48,7 @@ function Home() {
             className="home-image" // You can use this class for styling
           />
         </div>
- 
+ */}
         {/* Uncomment if needed in future */}
         {/* <div className="card">
           <Link to="https://public.tableau.com/app/profile/jackson.pereira/viz/FailureAnalysis-MASDivision/Dashboard2">
