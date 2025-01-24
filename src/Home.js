@@ -40,15 +40,16 @@ function Home() {
             </div>
           </Link>
         </div>
-{/* Displaying an image 
+{/* Displaying Iframe  */}
         <div className="image-container">
-          <img
-            src={process.env.PUBLIC_URL + '/img/Simple Gantt chart_page-0001.jpg'} // Make sure the image is in the public/img folder
-            alt="Gantt Chart" 
-            className="home-image" // You can use this class for styling
+          <iframe width="560"
+                        height="315"
+                        src=
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vTaKOyz-I2Z2k3ge43s3jDDkD_bCa4776Af34YF7cqMe53f_aE34rvVBJwT3AmULQ/pubhtml" >
+                </iframe>
           />
         </div>
- */}
+
         {/* Uncomment if needed in future */}
         {/* <div className="card">
           <Link to="https://public.tableau.com/app/profile/jackson.pereira/viz/FailureAnalysis-MASDivision/Dashboard2">
