@@ -10,6 +10,19 @@ function WorkProgress() {
 
   return (
 
+     <div className="card">
+          
+            <div className="card-info">
+              <h3>
+    Note:
+1.Greey Colour Vertical line denotes Current Date.
+2.Green Colour in Horizintal Bar Shows Progress of Task Till date.
+3.Red Colour Horizontal Bar shows Task to be done.
+4.Red colour Horizontal bar before the Vertical line denotes Pending task as on date
+5.Green Colour Horizontal bar after the vertical line denotes Task progressing ahead
+  </h3>
+            </div>
+
     <iframe
 
       title="DDS - WORK PROGRESS"
