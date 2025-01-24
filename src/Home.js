@@ -40,6 +40,17 @@ function Home() {
             </div>
           </Link>
         </div>
+ <div className="card">
+          <Link to="/workprogress">
+            <img
+              src={process.env.PUBLIC_URL + '/img/workprogress.png'}
+              alt="DDS Work Progress"
+            />
+            <div className="card-info">
+              <h3>DDS Work Progress</h3>
+            </div>
+          </Link>
+        </div>
  
 {/* Displaying Iframe  
         <div className="image-container">
