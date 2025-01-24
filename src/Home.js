@@ -40,7 +40,7 @@ function Home() {
             </div>
           </Link>
         </div>
-{/* Displaying Iframe  */}
+{/* Displaying Iframe  
         <div className="image-container">
           <iframe width="560"
                         height="315"
@@ -49,7 +49,7 @@ function Home() {
                 </iframe>
           />
         </div>
-
+*/}
         {/* Uncomment if needed in future */}
         {/* <div className="card">
           <Link to="https://public.tableau.com/app/profile/jackson.pereira/viz/FailureAnalysis-MASDivision/Dashboard2">
