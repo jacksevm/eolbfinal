@@ -41,13 +41,16 @@ function Home() {
           </Link>
         </div>
  <div className="card">
-          <Link to="https://docs.google.com/spreadsheets/d/e/2PACX-1vTaKOyz-I2Z2k3ge43s3jDDkD_bCa4776Af34YF7cqMe53f_aE34rvVBJwT3AmULQ/pubhtml">
+        
             <img
               src={process.env.PUBLIC_URL + '/img/eolbchecklist.png'}
               alt="Progress of DDS Work"
             />
             <div className="card-info">
               <h3>DDS Work Progress</h3>
+                <a href="https://codefrontend.com" target="_blank" rel="noopener noreferrer">
+  Go to codefrontend.com
+</a>
             </div>
 {/* Displaying Iframe  
         <div className="image-container">
