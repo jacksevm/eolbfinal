@@ -8,6 +8,8 @@ function MenuBar() {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/eolb">EOLB Status</Link></li>
         <li><Link to="/eslb">ESLB Status</Link></li>
+    <li><Link to="/workprogress">DDS Work Progress</Link></li>
+    
       </ul>
     </div>
   );
