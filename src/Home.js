@@ -29,7 +29,7 @@ function Home() {
           </Link>
         </div>
 
-        <div className="card">
+       {/* <div className="card">
           <Link to="/eolbchecklist">
             <img
               src={process.env.PUBLIC_URL + '/img/eolbchecklist.png'}
@@ -39,7 +39,7 @@ function Home() {
               <h3>EOLB Check Lists</h3>
             </div>
           </Link>
-        </div>
+        </div>*/}
  <div className="card">
           <Link to="/workprogress">
             <img
