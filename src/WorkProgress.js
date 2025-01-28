@@ -10,11 +10,7 @@ function WorkProgress() {
 
   return (
 
-    <div className="button-container">
-          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/16qa7ixZ4wBWGv-kaGfx8M7RlAp91Wvve/edit?gid=1653570427#gid=1653570427')}>
-            Open Google Sheet
-          </button>
-        </div>
+   
 
     <iframe
 
