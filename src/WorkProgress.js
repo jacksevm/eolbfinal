@@ -6,13 +6,9 @@ function WorkProgress() {
 
   const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTaKOyz-I2Z2k3ge43s3jDDkD_bCa4776Af34YF7cqMe53f_aE34rvVBJwT3AmULQ/pubhtml'; // Replace with your sheet's published URL
 
-
-
   return (
 
-   
-
-    <iframe
+       <iframe
 
       title="DDS - WORK PROGRESS"
 
