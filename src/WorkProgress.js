@@ -13,7 +13,7 @@ function WorkProgress() {
     <div className='container'>
        
         <div className="button-container">
-          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1M7YeJcjV5tJQxNR2mnsdqblVWThcFQUS9OptnZSIhf0/edit#gid=0", '_blank')}>
+          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/16qa7ixZ4wBWGv-kaGfx8M7RlAp91Wvve/edit?gid=1653570427#gid=1653570427", '_blank')}>
             Open Google Sheet
           </button>
         </div>
