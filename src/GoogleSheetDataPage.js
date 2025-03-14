@@ -16,16 +16,13 @@ const GoogleSheetDataPage = () => {
   }, []);
 
   const filteredData = data.slice(1).filter(row =>
-    row[0]?.toLowerCase().includes(searchQuery.toLowerCase())
+    row[1]?.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <div className="page-container">
       <h2 className="page-title">
-        FAT DATA 
-      </h2>
-     <h2 className="page-title">
-        (DDS BETWEEN CGL to VM)
+        FAT DATA <br /> (DDS BETWEEN CGL to VM)
       </h2>
       <input
         type="text"
