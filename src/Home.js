@@ -28,18 +28,6 @@ function Home() {
             </div>
           </Link>
         </div>
-
-       <div className="card">
-          <Link to="/fat">
-            <img
-              src={process.env.PUBLIC_URL + '/img/Mobile-testing-2.png'}
-              alt="FAT Testing Data"
-            />
-            <div className="card-info">
-              <h3>FAT DATA</h3>
-            </div>
-          </Link>
-        </div>
  <div className="card">
           <Link to="/workprogress">
             <img
@@ -51,6 +39,18 @@ function Home() {
             </div>
           </Link>
         </div>
+       <div className="card">
+          <Link to="/fat">
+            <img
+              src={process.env.PUBLIC_URL + '/img/Mobile-testing-2.png'}
+              alt="FAT Testing Data"
+            />
+            <div className="card-info">
+              <h3>FAT DATA</h3>
+            </div>
+          </Link>
+        </div>
+
  
 {/* Displaying Iframe  
         <div className="image-container">
