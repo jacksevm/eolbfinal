@@ -58,7 +58,7 @@ const GoogleSheetDataPage = () => {
       <table className="data-table">
         <thead>
           <tr className="table-header">
-            <th>#</th>
+            <th>Sl.No</th>
             {data[0] && data[0].map((header, index) => (
               <th key={index}>
                 {header}
