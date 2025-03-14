@@ -32,7 +32,7 @@ function Home() {
        <div className="card">
           <Link to="/fat">
             <img
-              src={process.env.PUBLIC_URL + '/img/fattesting.png'}
+              src={process.env.PUBLIC_URL + '/img/Mobile-testing-2.png'}
               alt="FAT Testing Data"
             />
             <div className="card-info">
