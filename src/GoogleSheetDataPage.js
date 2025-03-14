@@ -41,9 +41,7 @@ const GoogleSheetDataPage = () => {
      <h2 className="page-title">
        (DDS BETWEEN CGL to VM)
       </h2>
-    
-    
-   
+
       <div className="table-container">
       <input
         type="text"
@@ -52,54 +50,56 @@ const GoogleSheetDataPage = () => {
         onChange={e => setSearchQuery(e.target.value)}
         className="search-bar"
       />
-          <div className="button-container">
-          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1Uoyrx4z1Uzy9nPtLtiVmXRG5vMOfy9YJL-0GThg-0p0/edit?gid=0#gid=0", '_blank')}>
-            Open Google Sheet
-          </button>
-        </div>
-        <table className="data-table">
-          <thead>
-            <tr className="table-header">
-              {data[0] && data[0].map((header, index) => (
-                <th key={index}>
-                  {header}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {paginatedData.length > 0 ? (
-              paginatedData.map((row, rowIndex) => (
-                <tr key={rowIndex} className="table-row">
-                  {row.map((cell, cellIndex) => (
-                    <td key={cellIndex} className="table-cell">
-                      {cell}
-                    </td>
-                  ))}
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan={data[0]?.length || 1} className="text-center">
-                  No data found
-                </td>
+      <div className="button-container">
+        <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1Uoyrx4z1Uzy9nPtLtiVmXRG5vMOfy9YJL-0GThg-0p0/edit?gid=0#gid=0", '_blank')}>
+          Open Google Sheet
+        </button>
+      </div>
+      <table className="data-table">
+        <thead>
+          <tr className="table-header">
+            <th>#</th>
+            {data[0] && data[0].map((header, index) => (
+              <th key={index}>
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {paginatedData.length > 0 ? (
+            paginatedData.map((row, rowIndex) => (
+              <tr key={rowIndex} className="table-row">
+                <td className="table-cell">{(currentPage - 1) * itemsPerPage + rowIndex + 1}</td>
+                {row.map((cell, cellIndex) => (
+                  <td key={cellIndex} className="table-cell">
+                    {cell}
+                  </td>
+                ))}
               </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
-      <div className="pagination">
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index + 1}
-            onClick={() => handlePageChange(index + 1)}
-            className={`page-button ${currentPage === index + 1 ? 'active' : ''}`}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+            ))
+          ) : (
+            <tr>
+              <td colSpan={data[0]?.length + 1 || 2} className="text-center">
+                No data found
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
     </div>
+    <div className="pagination">
+      {Array.from({ length: totalPages }, (_, index) => (
+        <button
+          key={index + 1}
+          onClick={() => handlePageChange(index + 1)}
+          className={`page-button ${currentPage === index + 1 ? 'active' : ''}`}
+        >
+          {index + 1}
+        </button>
+      ))}
+    </div>
+  </div>
   );
 };
 
