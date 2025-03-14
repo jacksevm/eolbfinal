@@ -16,7 +16,7 @@ const GoogleSheetDataPage = () => {
 
   return (
     <div className="page-container">
-      <h2 className="page-title">FAT DATA (DDS BETWEEN CGL to VM)</h2>
+      <h2 className="page-title">"FAT DATA (DDS BETWEEN CGL to VM)"</h2>
       <div className="table-container">
         <table className="data-table">
           <thead>
