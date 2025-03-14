@@ -10,14 +10,19 @@ const GoogleSheetDataPage = () => {
       .then(response => response.text())
       .then(csv => {
         const rows = csv.split('\n').map(row => row.split(','));
+        console.log('Fetched data:', rows); // Debugging line
         setData(rows);
       })
       .catch(error => console.error('Error fetching Google Sheet:', error));
   }, []);
 
+  console.log('Full data:', data); // Debugging line
+
   const filteredData = data.slice(1).filter(row =>
     row[1]?.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  console.log('Filtered data:', filteredData); // Debugging line
 
   return (
     <div className="page-container">
@@ -43,15 +48,23 @@ const GoogleSheetDataPage = () => {
             </tr>
           </thead>
           <tbody>
-            {filteredData.map((row, rowIndex) => (
-              <tr key={rowIndex} className="table-row">
-                {row.map((cell, cellIndex) => (
-                  <td key={cellIndex} className="table-cell">
-                    {cell}
-                  </td>
-                ))}
+            {filteredData.length > 0 ? (
+              filteredData.map((row, rowIndex) => (
+                <tr key={rowIndex} className="table-row">
+                  {row.map((cell, cellIndex) => (
+                    <td key={cellIndex} className="table-cell">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan={data[0]?.length || 1} className="text-center">
+                  No data found
+                </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>
