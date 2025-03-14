@@ -29,17 +29,17 @@ function Home() {
           </Link>
         </div>
 
-       {/* <div className="card">
-          <Link to="/eolbchecklist">
+     
+          <Link to="/fat">
             <img
-              src={process.env.PUBLIC_URL + '/img/eolbchecklist.png'}
-              alt="EOLB Pre Commissioning Check Lists"
+              src={process.env.PUBLIC_URL + '/img/fattesting.png'}
+              alt="FAT Testing Data"
             />
             <div className="card-info">
-              <h3>EOLB Check Lists</h3>
+              <h3>FAT DATA</h3>
             </div>
           </Link>
-        </div>*/}
+        </div>
  <div className="card">
           <Link to="/workprogress">
             <img
