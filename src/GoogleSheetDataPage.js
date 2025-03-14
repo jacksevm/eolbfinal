@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 const GoogleSheetDataPage = () => {
   const [data, setData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
   const sheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTbNntbhjHIZSDdFgXbBD5JuauDfu7kHK7CsKbQ3Il-hiTKtyInc8h0HpraGeZPp_tll8y0RGWufLcN/pub?output=csv';
 
   useEffect(() => {
@@ -23,6 +25,13 @@ const GoogleSheetDataPage = () => {
   );
 
   console.log('Filtered data:', filteredData); // Debugging line
+
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const paginatedData = filteredData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
   return (
     <div className="page-container">
@@ -53,8 +62,8 @@ const GoogleSheetDataPage = () => {
             </tr>
           </thead>
           <tbody>
-            {filteredData.length > 0 ? (
-              filteredData.map((row, rowIndex) => (
+            {paginatedData.length > 0 ? (
+              paginatedData.map((row, rowIndex) => (
                 <tr key={rowIndex} className="table-row">
                   {row.map((cell, cellIndex) => (
                     <td key={cellIndex} className="table-cell">
@@ -72,6 +81,17 @@ const GoogleSheetDataPage = () => {
             )}
           </tbody>
         </table>
+      </div>
+      <div className="pagination">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => handlePageChange(index + 1)}
+            className={`page-button ${currentPage === index + 1 ? 'active' : ''}`}
+          >
+            {index + 1}
+          </button>
+        ))}
       </div>
     </div>
   );
