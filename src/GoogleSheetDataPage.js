@@ -50,7 +50,7 @@ const GoogleSheetDataPage = () => {
         placeholder="Search by station name"
         value={searchQuery}
         onChange={e => setSearchQuery(e.target.value)}
-        className="search-bar"
+        className="button-container"
       />
           <div className="button-container">
           <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1Uoyrx4z1Uzy9nPtLtiVmXRG5vMOfy9YJL-0GThg-0p0/edit?gid=0#gid=0", '_blank')}>
