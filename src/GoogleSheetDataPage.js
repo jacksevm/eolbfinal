@@ -35,27 +35,21 @@ const GoogleSheetDataPage = () => {
 
   return (
     <div className="page-container">
-      <div className="button-container">
-          <div className="button-container">
-          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1Uoyrx4z1Uzy9nPtLtiVmXRG5vMOfy9YJL-0GThg-0p0/edit?gid=0#gid=0')}>
-            Open Google Sheet
-          </button>
-   <input
-        type="text"
-        placeholder="Search by station name"
-        value={searchQuery}
-        onChange={e => setSearchQuery(e.target.value)}
-        className="search-bar"
-      />
-   </div>
       <h2 className="page-title">
         FAT DATA 
       </h2>
      <h2 className="page-title">
        (DDS BETWEEN CGL to VM)
       </h2>
+    
+      <input
+        type="text"
+        placeholder="Search by station name"
+        value={searchQuery}
+        onChange={e => setSearchQuery(e.target.value)}
+        className="search-bar"
+      />
    
-     
       <div className="table-container">
         <table className="data-table">
           <thead>
