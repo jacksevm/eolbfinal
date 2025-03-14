@@ -27,7 +27,7 @@ function App() {
         <Route path="/workprogress" element={<WorkProgress />} />
         <Route path="/eolb" element={<EOLB />} />
         <Route path="/eolbchecklist" element={<EolbChecklist />} />
-        <Route path="/fat" element={<HtmlViewer />} />
+        <Route path="/fat" element={<GoogleSheetDataPage />} />
   
   
       </Routes>
