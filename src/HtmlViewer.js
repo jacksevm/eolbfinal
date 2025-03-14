@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const GoogleSheetDataPage = () => {
   const [data, setData] = useState([]);
-  const sheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQkJiM-Ke_p6l2F8aeUpFx5fctHI0AiDjN43eXnROEaMxpgwyR4j_9D4_ZcRgqj9x8APy5Ndkj1GWpB/pubhtml';
+  const sheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQkJiM-Ke_p6l2F8aeUpFx5fctHI0AiDjN43eXnROEaMxpgwyR4j_9D4_ZcRgqj9x8APy5Ndkj1GWpB/pub?output=csv';
 
   useEffect(() => {
     fetch(sheetURL)
