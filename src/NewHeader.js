@@ -24,7 +24,7 @@ const NewHeader = () => {
             <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
           <li><Link to="/workprogress" onClick={toggleMenu}>DDS Work Progress</Link></li>
             <li><Link to="/eolb" onClick={toggleMenu}>EOLB Status</Link></li>
-          <li><Link to="/eolb" onClick={toggleMenu}>FAT TESTING DATA</Link></li>
+          <li><Link to="/fat" onClick={toggleMenu}>FAT TESTING DATA</Link></li>
             {/* <li><Link to="/eolbchecklist" onClick={toggleMenu}>EOLB Pre-com Check lists</Link></li>*/}
           
           {/*<li><Link to="https://public.tableau.com/app/profile/jackson.pereira/viz/FailureAnalysis-MASDivision/Dashboard2" onClick={toggleMenu}>Failure Analysis</Link></li>*/}
