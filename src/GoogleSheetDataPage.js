@@ -15,22 +15,22 @@ const GoogleSheetDataPage = () => {
   }, []);
 
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4 text-center text-blue-600">FAT TESTING DATA - DDS WORK BETWEEN CGL-VM</h2>
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-300 shadow-lg rounded-lg">
+    <div className="page-container">
+      <h2 className="page-title">Google Sheet Data</h2>
+      <div className="table-container">
+        <table className="data-table">
           <thead>
-            <tr className="bg-blue-500 text-white">
+            <tr className="table-header">
               {data[0] && data[0].map((header, index) => (
-                <th key={index} className="border px-4 py-2 text-left font-semibold">{header}</th>
+                <th key={index}>{header}</th>
               ))}
             </tr>
           </thead>
           <tbody>
             {data.slice(1).map((row, rowIndex) => (
-              <tr key={rowIndex} className={rowIndex % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>
+              <tr key={rowIndex} className="table-row">
                 {row.map((cell, cellIndex) => (
-                  <td key={cellIndex} className="border px-4 py-2 text-gray-700">{cell}</td>
+                  <td key={cellIndex} className="table-cell">{cell}</td>
                 ))}
               </tr>
             ))}
@@ -42,4 +42,3 @@ const GoogleSheetDataPage = () => {
 };
 
 export default GoogleSheetDataPage;
-
