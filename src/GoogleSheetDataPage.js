@@ -36,6 +36,7 @@ const GoogleSheetDataPage = () => {
   return (
     <div className="page-container">
       <div className="button-container">
+          <div className="button-container">
           <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1Uoyrx4z1Uzy9nPtLtiVmXRG5vMOfy9YJL-0GThg-0p0/edit?gid=0#gid=0')}>
             Open Google Sheet
           </button>
@@ -46,8 +47,7 @@ const GoogleSheetDataPage = () => {
         onChange={e => setSearchQuery(e.target.value)}
         className="search-bar"
       />
-   
-        </div>
+   </div>
       <h2 className="page-title">
         FAT DATA 
       </h2>
