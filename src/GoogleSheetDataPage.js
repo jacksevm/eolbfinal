@@ -51,6 +51,11 @@ const GoogleSheetDataPage = () => {
       />
    
       <div className="table-container">
+          <div className="button-container">
+          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1Uoyrx4z1Uzy9nPtLtiVmXRG5vMOfy9YJL-0GThg-0p0/edit?gid=0#gid=0", '_blank')}>
+            Open Google Sheet
+          </button>
+        </div>
         <table className="data-table">
           <thead>
             <tr className="table-header">
