@@ -27,8 +27,12 @@ const GoogleSheetDataPage = () => {
   return (
     <div className="page-container">
       <h2 className="page-title">
-        FAT DATA <br /> (DDS BETWEEN CGL to VM)
+        FAT DATA 
       </h2>
+     <h2 className="page-title">
+       (DDS BETWEEN CGL to VM)
+      </h2>
+     <div className="table-container">
       <input
         type="text"
         placeholder="Search by station name"
@@ -36,6 +40,7 @@ const GoogleSheetDataPage = () => {
         onChange={e => setSearchQuery(e.target.value)}
         className="search-bar"
       />
+      </div>
       <div className="table-container">
         <table className="data-table">
           <thead>
