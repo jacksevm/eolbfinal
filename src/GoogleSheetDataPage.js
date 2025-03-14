@@ -41,8 +41,11 @@ const GoogleSheetDataPage = () => {
      <h2 className="page-title">
        (DDS BETWEEN CGL to VM)
       </h2>
-    
-      <input
+     <div className="button-container">
+          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1M7YeJcjV5tJQxNR2mnsdqblVWThcFQUS9OptnZSIhf0/edit#gid=0", '_blank')}>
+            Open Google Sheet
+          </button>
+   <input
         type="text"
         placeholder="Search by station name"
         value={searchQuery}
@@ -50,6 +53,8 @@ const GoogleSheetDataPage = () => {
         className="search-bar"
       />
    
+        </div>
+     
       <div className="table-container">
         <table className="data-table">
           <thead>
