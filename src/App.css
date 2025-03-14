@@ -36,7 +36,7 @@ body {
 
 .table-container {
   width: 100%;
-  max-width: 64rem;
+  max-width: auto;
   overflow-x: auto;
 }
 
