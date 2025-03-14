@@ -29,13 +29,15 @@ const GoogleSheetDataPage = () => {
       <h2 className="page-title">
         FAT DATA <br /> (DDS BETWEEN CGL to VM)
       </h2>
-      <input
-        type="text"
-        placeholder="Search by station name"
-        value={searchQuery}
-        onChange={e => setSearchQuery(e.target.value)}
-        className="search-bar"
-      />
+      <div className="search-container" style={{ display: 'flex', justifyContent: 'flex-start' }}>
+        <input
+          type="text"
+          placeholder="Search by station name"
+          value={searchQuery}
+          onChange={e => setSearchQuery(e.target.value)}
+          className="search-bar"
+        />
+      </div>
       <div className="table-container">
         <table className="data-table">
           <thead>
