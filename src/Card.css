@@ -1,4 +1,4 @@
-.card {
+{/*.card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 10px;
   padding: 10px;
@@ -21,4 +21,50 @@
 .App {
   text-align: center;
 }
+*/}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* space between cards */
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px; /* fixed width for consistent layout */
+  height: 350px; /* fixed height to ensure .card-info stays at bottom */
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Keeps image aspect-ratio without distortion */
+}
+
+.card-info {
+  padding: 15px;
+  background-color: #fff;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.App {
+  text-align: center;
+  font-family: sans-serif;
+}
+
 
