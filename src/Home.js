@@ -46,9 +46,11 @@ function Home() {
               alt="MYP Work Progress"
             />
             <div className="card-info">
-                  <h3></h3>
-                  <h3></h3>
-              <h3>MYP Work Progress</h3>
+                
+              <h3> 
+                <br />
+                <br />
+                MYP Work Progress</h3>
             </div>
           </Link>
         </div>
