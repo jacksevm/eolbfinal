@@ -50,6 +50,7 @@ function Home() {
               <h3> 
                 <br />
                 <br />
+                 <br />
                 MYP Work Progress</h3>
             </div>
           </Link>
