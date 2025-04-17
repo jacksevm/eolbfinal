@@ -42,7 +42,7 @@ function Home() {
                 <div className="card">
           <Link to="/workprogressmyp">
             <img
-              src={process.env.PUBLIC_URL + '/img/station.jpg'}
+              src={process.env.PUBLIC_URL + '/img/Mundiyampakkam_Railway_Station.jpg'}
               alt="MYP Work Progress"
             />
             <div className="card-info">
