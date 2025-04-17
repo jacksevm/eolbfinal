@@ -8,6 +8,7 @@ import EOLB from './EOLB';
 import NewHeader from './NewHeader';
 import EolbChecklist from './EolbChecklist';
 import WorkProgress from './WorkProgress';
+import WorkProgressmyp from './WorkProgressmyp';
 import './App.css'; // Import the CSS file
 import GoogleSheetDataPage from './GoogleSheetDataPage';
 
