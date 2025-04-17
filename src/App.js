@@ -26,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/workprogress" element={<WorkProgress />} />
+         <Route path="/workprogressmyp" element={<WorkProgressmyp />} />
         <Route path="/eolb" element={<EOLB />} />
         <Route path="/eolbchecklist" element={<EolbChecklist />} />
         <Route path="/fat" element={<GoogleSheetDataPage />} />
