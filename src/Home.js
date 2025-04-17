@@ -16,7 +16,7 @@ function Home() {
             content="Google Sheet Interface for Chennai Division"
           />
         </Helmet>
-<div className="cards-container">
+
         <div className="card">
           <Link to="/eolb">
             <img
@@ -86,7 +86,7 @@ function Home() {
           </Link>
         </div> */}
 
-</div>
+
       </div>
 
       <Footer />
