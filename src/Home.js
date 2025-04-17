@@ -29,7 +29,7 @@ function Home() {
           </Link>
         </div>
  <div className="card">
-          <Link to="/workprogressmyp">
+          <Link to="/workprogress">
             <img
               src={process.env.PUBLIC_URL + '/img/workprogress.png'}
               alt="DDS Work Progress"
@@ -40,7 +40,7 @@ function Home() {
           </Link>
         </div>
                 <div className="card">
-          <Link to="/workprogress">
+          <Link to="/workprogressmyp">
             <img
               src={process.env.PUBLIC_URL + '/img/workprogress.png'}
               alt="DDS Work Progress"
