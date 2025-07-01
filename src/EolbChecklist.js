@@ -16,7 +16,7 @@ function Search({ handleSearch }) {
   );
 }
 
-function EOLB() {
+function EolbChecklist() {
   const [data, setData] = useState([]);
   const [tableHeading, setTableHeading] = useState('');
   const [headings, setHeadings] = useState([]);
@@ -29,7 +29,7 @@ function EOLB() {
   const itemsPerPage = 10;
 
   useEffect(() => {
-    fetch('https://sheet2api.com/v1/yhQYMB3ATSiA/eolb-status')
+    fetch('https://sheet2api.com/v1/yhQYMB3ATSiA/eslb-status')
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
@@ -111,7 +111,7 @@ function EOLB() {
   return (
     <div className="App">
       <Helmet>
-        <title>EOLB Data</title>
+        <title>ESLB Data</title>
         <meta
           name="description"
           content="Google Sheet Interface for Chennai Division"
@@ -140,7 +140,7 @@ function EOLB() {
               className="google-sheets-button"
               onClick={() =>
                 window.open(
-                  'https://docs.google.com/spreadsheets/d/1M7YeJcjV5tJQxNR2mnsdqblVWThcFQUS9OptnZSIhf0/edit#gid=0',
+                  'https://docs.google.com/spreadsheets/d/1JsatGGwuro0x8hyPizzxJT-IIFGZz01gVHqaMHDz9LM/edit?gid=0#gid=0',
                   '_blank'
                 )
               }
@@ -221,4 +221,4 @@ function EOLB() {
   );
 }
 
-export default EOLB;
+export default EolbChecklist;
