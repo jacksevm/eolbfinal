@@ -39,7 +39,7 @@ function Home() {
             </div>
           </Link>
         </div>
-                <div className="card">
+               {/* <div className="card">
           <Link to="/workprogressmyp">
             <img
               src={process.env.PUBLIC_URL + '/img/Mundiyampakkam_Railway_Station.jpg'}
@@ -55,7 +55,7 @@ function Home() {
             </div>
           </Link>
         </div>
-{/* <div className="card">
+ <div className="card">
           <Link to="/fat">
             <img
               src={process.env.PUBLIC_URL + '/img/Mobile-testing-2.png'}
