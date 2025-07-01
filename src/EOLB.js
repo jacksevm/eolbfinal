@@ -14,12 +14,12 @@ function Search({ handleSearch }) {
 
 // Pagination component
 function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
-  const pageNumbers = [1];
-  {*
+  const pageNumbers = [];
+  
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
-*}
+
   return (
     <div className="pagination-container">
       <Helmet>
