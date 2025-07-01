@@ -14,7 +14,7 @@ function Search({ handleSearch }) {
 
 // Pagination component
 function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
-  const pageNumbers = [];
+  const pageNumbers = [1];
   {*
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
