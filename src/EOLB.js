@@ -66,7 +66,7 @@ function EOLB() {
   const handleSearch = event => {
     const term = event.target.value.toLowerCase();
     setSearchTerm(term);
-    setCurrentPage(1);
+    setCurrentPage(1); // Reset to first page on new search
   };
 
   const handleSort = column => {
@@ -78,139 +78,7 @@ function EOLB() {
     }
   };
 
+  // Filter and sort the full dataset
   const filteredAndSortedItems = data
     .filter(item =>
-      item['LC Number']?.toString().toLowerCase().startsWith(searchTerm)
-    )
-    .sort((a, b) => {
-      if (sortColumn !== null) {
-        const columnA = String(a[sortColumn] || '').toLowerCase();
-        const columnB = String(b[sortColumn] || '').toLowerCase();
-        if (!isNaN(columnA) && !isNaN(columnB)) {
-          return sortOrder === 'asc'
-            ? columnA - columnB
-            : columnB - columnA;
-        } else {
-          return sortOrder === 'asc'
-            ? columnA.localeCompare(columnB)
-            : columnB.localeCompare(columnA);
-        }
-      }
-      return 0;
-    });
-
-  const paginatedItems = usePagination
-    ? filteredAndSortedItems.slice(
-        (currentPage - 1) * itemsPerPage,
-        currentPage * itemsPerPage
-      )
-    : filteredAndSortedItems;
-
-  return (
-    <div className="App">
-      <Helmet>
-        <title>EOLB Data</title>
-        <meta
-          name="description"
-          content="Google Sheet Interface for Chennai Division"
-        />
-      </Helmet>
-
-      <div className="container">
-        <h1 className="heading">{tableHeading}</h1>
-
-        <div className="table-container">
-          <Search handleSearch={handleSearch} />
-
-          <div className="toggle-pagination">
-            <button onClick={() => setUsePagination(!usePagination)}>
-              {usePagination ? 'Show All Data' : 'Enable Pagination'}
-            </button>
-          </div>
-
-          <div className="button-container">
-            <button
-              className="google-sheets-button"
-              onClick={() =>
-                window.open(
-                  'https://docs.google.com/spreadsheets/d/1M7YeJcjV5tJQxNR2mnsdqblVWThcFQUS9OptnZSIhf0/edit#gid=0',
-                  '_blank'
-                )
-              }
-            >
-              Open Google Sheet
-            </button>
-          </div>
-
-          <div className="table-wrapper">
-            <div className="scrollable-table">
-              <table className="data-table">
-                <thead>
-                  <tr>
-                    {headings.map(
-                      (heading, index) =>
-                        heading !== 'ID' && (
-                          <th
-                            key={index}
-                            onClick={() => handleSort(heading)}
-                            className={
-                              sortColumn === heading
-                                ? `sortable ${sortOrder}`
-                                : 'sortable'
-                            }
-                          >
-                            {heading}
-                          </th>
-                        )
-                    )}
-                  </tr>
-                </thead>
-                <tbody>
-                  {paginatedItems.map((item, rowIndex) => (
-                    <tr key={rowIndex}>
-                      {headings.map(
-                        (heading, colIndex) =>
-                          heading !== 'ID' && (
-                            <td key={colIndex}>{item[heading]}</td>
-                          )
-                      )}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          {usePagination && (
-            <div className="pagination-container">
-              <ul className="pagination">
-                {Array.from({
-                  length: Math.ceil(
-                    filteredAndSortedItems.length / itemsPerPage
-                  ),
-                }).map((_, i) => (
-                  <li
-                    key={i}
-                    className={
-                      currentPage === i + 1 ? 'page-item active' : 'page-item'
-                    }
-                  >
-                    <button
-                      onClick={() => setCurrentPage(i + 1)}
-                      className="page-link"
-                    >
-                      {i + 1}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-}
-
-export default EOLB;
+      item['LC]()
