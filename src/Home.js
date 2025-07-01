@@ -42,7 +42,7 @@ function Home() {
           <div className="card">
           <Link to="/slb">
             <img
-              src={process.env.PUBLIC_URL + '/img/RAILWAY-CROSSING.jpe'}
+              src={process.env.PUBLIC_URL + '/img/RAILWAY-CROSSING.png'}
               alt="Sliding Boom Work Progress"
             />
             <div className="card-info">
