@@ -45,10 +45,9 @@ function Home() {
               src={process.env.PUBLIC_URL + '/img/RAILWAY-CROSSING.png'}
               alt="Sliding Boom Work Progress"
             />
-            <div className="card-info">
-                
-              <h3> 
-                                SLB Work Progress</h3>
+             <div className="card-info">
+              <h3>SLB Work Progress</h3>
+            </div>
             </div>
           </Link>
         </div>
