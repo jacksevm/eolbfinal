@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
@@ -45,9 +46,10 @@ function Home() {
               src={process.env.PUBLIC_URL + '/img/RAILWAY-CROSSING.png'}
               alt="Sliding Boom Work Progress"
             />
-             <div className="card-info">
-              <h3>SLB Work Progress</h3>
-            </div>
+            <div className="card-info">
+                
+              <h3> 
+                                SLB Work Progress</h3>
             </div>
           </Link>
         </div>
