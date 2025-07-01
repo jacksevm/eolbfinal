@@ -23,7 +23,7 @@ function Pagination({ totalItems, itemsPerPage, currentPage, paginate }) {
   return (
     <div className="pagination-container">
       <Helmet>
-        <title>EOLB Pre Commissioning Check List</title>
+        <title>SLB Commissioning Details</title>
         <meta name="description" content="Google Sheet Interface for Chennai Division" />
         {/* Add more meta tags, link tags, or other head elements as needed */}
       </Helmet>
@@ -53,7 +53,7 @@ function EolbChecklist() {
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
   useEffect(() => {
-    fetch('https://sheet2api.com/v1/yhQYMB3ATSiA/eolb-checklist') // Replace with your actual endpoint URL
+    fetch('https://sheet2api.com/v1/yhQYMB3ATSiA/eslb-status') // Replace with your actual endpoint URL
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -148,7 +148,7 @@ function EolbChecklist() {
         <Search handleSearch={handleSearch} />
        
         <div className="button-container">
-          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1JsatGGwuro0x8hyPizzxJT-IIFGZz01gVHqaMHDz9LM/edit#gid=0", '_blank')}>
+          <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1JsatGGwuro0x8hyPizzxJT-IIFGZz01gVHqaMHDz9LM/edit?gid=0#gid=0", '_blank')}>
             Open Google Sheet
           </button>
         </div>
