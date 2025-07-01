@@ -39,11 +39,11 @@ function Home() {
             </div>
           </Link>
         </div>
-               {/* <div className="card">
-          <Link to="/workprogressmyp">
+          <div className="card">
+          <Link to="/slb">
             <img
-              src={process.env.PUBLIC_URL + '/img/Mundiyampakkam_Railway_Station.jpg'}
-              alt="MYP Work Progress"
+              src={process.env.PUBLIC_URL + '/img/RAILWAY-CROSSING.jpe'}
+              alt="Sliding Boom Work Progress"
             />
             <div className="card-info">
                 
@@ -51,11 +51,11 @@ function Home() {
                 <br />
                 <br />
                  <br />
-                MYP Work Progress</h3>
+                SLB Work Progress</h3>
             </div>
           </Link>
         </div>
- <div className="card">
+{/* <div className="card">
           <Link to="/fat">
             <img
               src={process.env.PUBLIC_URL + '/img/Mobile-testing-2.png'}
