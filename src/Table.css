@@ -163,3 +163,20 @@ User
   background-color: #0056b3;
 }
 
+.toggle-pagination {
+  margin: 10px 0;
+  text-align: right;
+}
+
+.toggle-pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggle-pagination button:hover {
+  background-color: #0056b3;
+}
