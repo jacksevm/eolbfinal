@@ -48,10 +48,7 @@ function Home() {
             <div className="card-info">
                 
               <h3> 
-                <br />
-                <br />
-                 <br />
-                SLB Work Progress</h3>
+                                SLB Work Progress</h3>
             </div>
           </Link>
         </div>
