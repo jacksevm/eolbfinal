@@ -11,6 +11,7 @@ import WorkProgress from './WorkProgress';
 import WorkProgressmyp from './WorkProgressmyp';
 import './App.css'; // Import the CSS file
 import GoogleSheetDataPage from './GoogleSheetDataPage';
+import SheetData from './TableData';
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/eolb" element={<EOLB />} />
         <Route path="/slb" element={<EolbChecklist />} />
         <Route path="/fat" element={<GoogleSheetDataPage />} />
+        <Route path="/dddata" element={<TableData />} />
   
   
       </Routes>
