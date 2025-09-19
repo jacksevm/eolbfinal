@@ -51,7 +51,7 @@ const GoogleSheetDataPage = () => {
         className="search-bar"
       />
       <div className="button-container">
-        <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1Uoyrx4z1Uzy9nPtLtiVmXRG5vMOfy9YJL-0GThg-0p0/edit?gid=0#gid=0", '_blank')}>
+        <button className="google-sheets-button" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1v5hpRWYAs90aCiI-mCVbviNSjME273Cn845VWUYi5CU/edit?gid=581323794#gid=581323794')}>
           Open Google Sheet
         </button>
       </div>
