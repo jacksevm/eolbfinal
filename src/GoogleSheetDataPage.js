@@ -5,7 +5,7 @@ const GoogleSheetDataPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
-  const sheetURL = 'https://script.google.com/macros/s/AKfycbzOCWfYXFAanZc6U0v_eo-gVm7yhuM1ZhGdXYvw3TUBknyIDgFbyBqV5CWjVfr-I44/exec';
+  const sheetURL = 'https://docs.google.com/spreadsheets/d/1Uoyrx4z1Uzy9nPtLtiVmXRG5vMOfy9YJL-0GThg-0p0/edit?gid=0#gid=0';
 
   useEffect(() => {
     fetch(sheetURL)
