@@ -31,7 +31,7 @@ function App() {
         <Route path="/eolb" element={<EOLB />} />
         <Route path="/slb" element={<EolbChecklist />} />
         <Route path="/fat" element={<GoogleSheetDataPage />} />
-        <Route path="/dddata" element={<TableData />} />
+       
   
   
       </Routes>
