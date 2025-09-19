@@ -81,7 +81,7 @@ function EOLB() {
   // Filter and sort the full dataset
   const filteredAndSortedItems = data
     .filter(item =>
-      item['Color']?.toString().toLowerCase() === 'red' &&
+      
       item['LC Number']?.toString().toLowerCase().startsWith(searchTerm)
     )
     .sort((a, b) => {
