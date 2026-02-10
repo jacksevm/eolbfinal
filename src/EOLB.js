@@ -112,10 +112,10 @@ function EOLB() {
   return (
     <div className="App">
       <Helmet>
-        <title>EOLB Data</title>
+        <title>Work Progress Data</title>
         <meta
           name="description"
-          content="Google Sheet Interface for Chennai Division"
+          content="Google Sheet Interface "
         />
       </Helmet>
 
