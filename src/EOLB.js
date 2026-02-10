@@ -9,7 +9,7 @@ function Search({ handleSearch }) {
       <input
         type="text"
         className="search-input"
-        placeholder="Search LC Number..."
+        placeholder="Search work from the List..."
         onChange={handleSearch}
       />
     </div>
