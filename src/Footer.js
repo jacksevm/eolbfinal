@@ -1,13 +1,15 @@
 // Footer.js
 
 import React from 'react';
-import './footer.css'; // Import the CSS file for styling
+import './footer.css';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footercontainer">
-        <p>&copy; 2024 SR/MAS Division. All rights reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} CSTE/Proj/I/MAS - Southern Railway. All rights reserved.
+        </p>
       </div>
     </footer>
   );
