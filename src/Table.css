@@ -1,182 +1,75 @@
-User
-/* Table styles */
-.containers{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensure the container fills the height of the viewport */
-}
-
-.table-container {
- 
-  overflow-x: auto; /* Enable Horizontal scroll */
- 
-  
-}
+/* ---------- TABLE LAYOUT FIX ---------- */
 
 .table-wrapper {
-  overflow-x: auto; /* Make the table horizontally scrollable */
-  max-width: 100%; /* Ensure that the table wrapper does not exceed the viewport width */
+  overflow-x: auto;
+  max-width: 100%;
   padding: 10px;
 }
 
-.scrollable-table {
-  min-width: 100%; /* Ensure that the table always fills the width of its container */
+.data-table {
+  width: 100%;
   border-collapse: collapse;
-}
-.scrollable-table-auto {
-  min-width: auto; /* Ensure that the table always fills the width of its container */
-  border-collapse: collapse;
+  table-layout: fixed;        /* 🔥 MOST IMPORTANT LINE */
 }
 
-.scrollable-table th,
-.scrollable-table td {
+/* Cells */
+.data-table th,
+.data-table td {
   border: 1px solid #ddd;
-  padding: 8px;
-  white-space: pre-wrap; /* Allow content to wrap within table cells */
-  word-wrap: break-word; /* Ensure long words break and wrap to next line */
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+
+  white-space: normal;        /* allow wrapping */
+  word-break: break-word;     /* break long words */
+  overflow-wrap: break-word;
 }
 
-
-/* Pagination styles */
-.pagination-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+/* Sticky header (optional but nice) */
+.data-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f8f8f8;
+  z-index: 2;
 }
 
-.pagination {
-  list-style-type: none;
-  padding: 0;
+/* ---------- COLUMN WIDTH CONTROL ---------- */
+/* Adjust numbers based on your actual columns */
+
+.data-table th:nth-child(1),
+.data-table td:nth-child(1) {
+  width: 8%;
 }
 
-.pagination .page-item {
-  display: inline;
-  margin-right: 5px;
+.data-table th:nth-child(2),
+.data-table td:nth-child(2) {
+  width: 30%;   /* Description column */
 }
 
-.pagination .page-item.active .page-link {
-  background-color: #007bff;
-  color: #fff;
-  border-color: #007bff;
+.data-table th:nth-child(3),
+.data-table td:nth-child(3) {
+  width: 12%;
 }
 
-.pagination .page-link {
-  color: #007bff;
-  text-decoration: none;
-  padding: 8px 16px;
-  border: 1px solid #007bff;
-  cursor: pointer;
+.data-table th:nth-child(4),
+.data-table td:nth-child(4) {
+  width: 12%;
 }
 
-.pagination .page-link:hover {
-  background-color: #f0f0f0;
+.data-table th:nth-child(5),
+.data-table td:nth-child(5) {
+  width: 10%;
 }
 
-/* Search bar styles */
-.search-container {
-  padding: 20px; /* Add padding to the search container */
-}
-
-.search-input {
-  padding: 8px; /* Add padding to the search input */
-  width: 20%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-@keyframes shine {
-  0% {
-    color: blue; /* Start with white color */
-  }
-  50% {
-    color: greenyellow; /* Transition to gold color */
-  }
-  75% {
-    color: grey; /* Back to white color */
-  }
-}
-
-/* Apply animation to the heading */
-.heading {
-  animation: shine 5s ease infinite; /* Apply the shining animation */
-  text-align: center; /* Align the heading to the center */
-  text-decoration: underline; /* Underline the heading */
-}
-
-/* Add styles for clickable column headers */
+/* ---------- SORT ICON ---------- */
 .sortable {
   cursor: pointer;
 }
 
-/* Add styles for indicating sort order */
 .sortable.asc::after {
-  content: ' ▲';
+  content: " ▲";
 }
 
 .sortable.desc::after {
-  content: ' ▼';
-}
-
-.data-table th,
-.data-table td {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-   
-}
-.data-table-autowidth th,
-.data-table-autowidth td,
-{
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  
-   
-}
-
-.data-table-autowidth td:nth-child(6) {
-  width: 25%;
-  word-wrap: break-word;
-}
-
-/* Table.css */
-
-/* Table.css */
-
-/* Other styles... */
-.button-container {
-  padding: 10px; /* Add padding to the search container */
-  }
-
-.google-sheets-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.google-sheets-button:hover {
-  background-color: #0056b3;
-}
-
-.toggle-pagination {
-  margin: 10px 0;
-  text-align: right;
-}
-
-.toggle-pagination button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.toggle-pagination button:hover {
-  background-color: #0056b3;
+  content: " ▼";
 }
