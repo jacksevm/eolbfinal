@@ -82,7 +82,7 @@ function EOLB() {
   const filteredAndSortedItems = data
     .filter(item =>
       
-      item['LC Number']?.toString().toLowerCase().startsWith(searchTerm)
+      item['Description of Work']?.toString().toLowerCase().startsWith(searchTerm)
     )
     .sort((a, b) => {
       if (sortColumn !== null) {
