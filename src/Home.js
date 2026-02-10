@@ -21,7 +21,7 @@ function Home() {
         <div className="card">
           <Link to="/eolb">
             <img
-              src={process.env.PUBLIC_URL + '/img/mltr.jpg'}
+              src={process.env.PUBLIC_URL + '/img/MLTR.png'}
               alt="KZC & MLTR Status"
             />
             <div className="card-info">
