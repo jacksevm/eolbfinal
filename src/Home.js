@@ -21,7 +21,7 @@ function Home() {
         <div className="card">
           <Link to="/eolb">
             <img
-              src={process.env.PUBLIC_URL + '/img/eolb.jpg'}
+              src={process.env.PUBLIC_URL + '/img/mltr.jpg'}
               alt="KZC & MLTR Status"
             />
             <div className="card-info">
@@ -29,7 +29,7 @@ function Home() {
             </div>
           </Link>
         </div>
- <div className="card">
+    {/*<div className="card">
           <Link to="/workprogress">
             <img
               src={process.env.PUBLIC_URL + '/img/mltr.png'}
@@ -40,7 +40,7 @@ function Home() {
             </div>
           </Link>
         </div>
-         {/* <div className="card">
+       <div className="card">
           <Link to="/slb">
             <img
               src={process.env.PUBLIC_URL + '/img/RAILWAY-CROSSING.png'}
