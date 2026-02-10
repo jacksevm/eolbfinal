@@ -14,7 +14,7 @@ function Home() {
           <title>GoogleSheet Interface | Home</title>
           <meta
             name="description"
-            content="Google Sheet Interface for Chennai Division"
+            content="Google Sheet Interface"
           />
         </Helmet>
 
@@ -22,17 +22,17 @@ function Home() {
           <Link to="/eolb">
             <img
               src={process.env.PUBLIC_URL + '/img/eolb.jpg'}
-              alt="EOLB Status"
+              alt="KZC & MLTR Status"
             />
             <div className="card-info">
-              <h3>EOLB Status</h3>
+              <h3>KZC & MLTR Status</h3>
             </div>
           </Link>
         </div>
  <div className="card">
           <Link to="/workprogress">
             <img
-              src={process.env.PUBLIC_URL + '/img/workprogress.png'}
+              src={process.env.PUBLIC_URL + '/img/mltr.png'}
               alt="DDS Work Progress"
             />
             <div className="card-info">
@@ -40,7 +40,7 @@ function Home() {
             </div>
           </Link>
         </div>
-          <div className="card">
+         {/* <div className="card">
           <Link to="/slb">
             <img
               src={process.env.PUBLIC_URL + '/img/RAILWAY-CROSSING.png'}
@@ -53,7 +53,7 @@ function Home() {
             </div>
           </Link>
         </div>
-{/* <div className="card">
+<div className="card">
           <Link to="/fat">
             <img
               src={process.env.PUBLIC_URL + '/img/Mobile-testing-2.png'}
