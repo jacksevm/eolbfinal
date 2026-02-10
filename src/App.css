@@ -46,6 +46,8 @@ body {
   border: 1px solid #d1d5db;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
+   border-collapse: collapse;
+  table-layout: fixed;   /* 
 }
 
 .table-header {
