@@ -141,7 +141,7 @@ function EOLB() {
               className="google-sheets-button"
               onClick={() =>
                 window.open(
-                  'https://docs.google.com/spreadsheets/d/1M7YeJcjV5tJQxNR2mnsdqblVWThcFQUS9OptnZSIhf0/edit#gid=0',
+                  'https://docs.google.com/spreadsheets/d/1IBYwYKO2e4s0C_oM78EAb7krbsIVHQH_4luAfy2AafE/edit?gid=0#gid=0',
                   '_blank'
                 )
               }
