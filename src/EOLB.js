@@ -29,7 +29,7 @@ function EOLB() {
   const itemsPerPage = 10;
 
   useEffect(() => {
-    fetch('https://sheet2api.com/v1/yhQYMB3ATSiA/eolb-status')
+    fetch('https://sheet2api.com/v1/yhQYMB3ATSiA/kzc_list-of-works-to-be-monitored')
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
